@@ -621,8 +621,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
     PG6     ------> LPUART1_RTS
     PG8     ------> LPUART1_RX
     PG7     ------> LPUART1_TX
+    PG5     ------> LPUART1_CTS
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_6|ARD_D0_Pin|ARD_D1_Pin;
+    GPIO_InitStruct.Pin = GPIO_PIN_6|ARD_D0_Pin|ARD_D1_Pin|GPIO_PIN_5;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -761,8 +762,9 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
     PG6     ------> LPUART1_RTS
     PG8     ------> LPUART1_RX
     PG7     ------> LPUART1_TX
+    PG5     ------> LPUART1_CTS
     */
-    HAL_GPIO_DeInit(GPIOG, GPIO_PIN_6|ARD_D0_Pin|ARD_D1_Pin);
+    HAL_GPIO_DeInit(GPIOG, GPIO_PIN_6|ARD_D0_Pin|ARD_D1_Pin|GPIO_PIN_5);
 
     /* LPUART1 DMA DeInit */
     HAL_DMA_DeInit(huart->hdmarx);
@@ -1154,7 +1156,6 @@ static void HAL_FMC_MspInit(void){
   PG0   ------> FMC_A10
   PE9   ------> FMC_D6
   PE15   ------> FMC_D12
-  PG5   ------> FMC_A15
   PG4   ------> FMC_A14
   PG3   ------> FMC_A13
   PG2   ------> FMC_A12
@@ -1185,8 +1186,8 @@ static void HAL_FMC_MspInit(void){
   GPIO_InitStruct.Alternate = GPIO_AF12_FMC;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-  GPIO_InitStruct.Pin = PSRAM_NE_Pin|PSRAM_A11_Pin|PSRAM_A10_Pin|PSRAM_A15_Pin
-                          |PSRAM_A14_Pin|PSRAM_A13_Pin|PSRAM_A12_Pin;
+  GPIO_InitStruct.Pin = PSRAM_NE_Pin|PSRAM_A11_Pin|PSRAM_A10_Pin|PSRAM_A14_Pin
+                          |PSRAM_A13_Pin|PSRAM_A12_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -1261,7 +1262,6 @@ static void HAL_FMC_MspDeInit(void){
   PG0   ------> FMC_A10
   PE9   ------> FMC_D6
   PE15   ------> FMC_D12
-  PG5   ------> FMC_A15
   PG4   ------> FMC_A14
   PG3   ------> FMC_A13
   PG2   ------> FMC_A12
@@ -1287,8 +1287,8 @@ static void HAL_FMC_MspDeInit(void){
                           |D12_Pin|D5_Pin|D11_Pin|D4_Pin
                           |D10_Pin|D9_Pin|D8_Pin);
 
-  HAL_GPIO_DeInit(GPIOG, PSRAM_NE_Pin|PSRAM_A11_Pin|PSRAM_A10_Pin|PSRAM_A15_Pin
-                          |PSRAM_A14_Pin|PSRAM_A13_Pin|PSRAM_A12_Pin);
+  HAL_GPIO_DeInit(GPIOG, PSRAM_NE_Pin|PSRAM_A11_Pin|PSRAM_A10_Pin|PSRAM_A14_Pin
+                          |PSRAM_A13_Pin|PSRAM_A12_Pin);
 
   HAL_GPIO_DeInit(GPIOD, D2_Pin|OE_Pin|D3_Pin|WE_Pin
                           |LCD_NE_Pin|D1_Pin|D15_Pin|D0_Pin

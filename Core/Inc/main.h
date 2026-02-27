@@ -221,8 +221,6 @@ void Error_Handler(void);
 #define D6_GPIO_Port GPIOE
 #define D12_Pin GPIO_PIN_15
 #define D12_GPIO_Port GPIOE
-#define PSRAM_A15_Pin GPIO_PIN_5
-#define PSRAM_A15_GPIO_Port GPIOG
 #define PSRAM_A14_Pin GPIO_PIN_4
 #define PSRAM_A14_GPIO_Port GPIOG
 #define PSRAM_A13_Pin GPIO_PIN_3
