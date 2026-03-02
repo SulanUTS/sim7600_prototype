@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "sim7600.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -117,8 +118,7 @@ int main(void)
 
   /* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */  HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -150,11 +150,39 @@ int main(void)
   MX_USART2_UART_Init();
   MX_QUADSPI_Init();
   MX_SAI1_Init();
-  MX_SDMMC1_SD_Init();
+  // MX_SDMMC1_SD_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
+
+  /* ── SIM7600G initialisation ──────────────────────────────────────────── */
+
+  /* 1. Power on the modem (PWRKEY pulse + 8 s boot wait) */
+  SIM7600_PowerOn();
+
+  /* 2. Start DMA receive — do this after power-on so boot URCs don't
+        arrive before the driver is ready to handle them                 */
+  SIM7600_Init(&hlpuart1);
+
+  char resp[SIM7600_RESP_BUF_SIZE];
+
+  /* 3. Confirm the modem is alive — retry for up to 10 s (handles
+        slow boot and auto-baud sync, mirrors TinyGSM testAT())         */
+  if (SIM7600_TestAT(10000u) == SIM7600_OK)
+  {
+    /* 4. Disable echo so responses are easier to parse */
+    SIM7600_SendAT("E0", "OK", NULL, 0, SIM7600_TIMEOUT_SHORT);
+
+    /* 5. Check signal quality — response: "+CSQ: 18,0\r\nOK" */
+    SIM7600_SendAT("+CSQ", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT);
+
+    /* 6. Check SIM card status */
+    SIM7600_SendAT("+CPIN?", "READY", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+
+    /* 7. Check network registration (0,1 = home, 0,5 = roaming) */
+    SIM7600_SendAT("+CREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+  }
 
   /* USER CODE END 2 */
 
@@ -1174,6 +1202,32 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+/**
+ * @brief  Retarget printf → USART2 (debug console, 115200 8N1).
+ *         Called by _write() in syscalls.c for every character sent to stdout.
+ */
+int __io_putchar(int ch)
+{
+    /* Translate bare \n to \r\n so terminals display correctly */
+    if (ch == '\n')
+    {
+        uint8_t cr = '\r';
+        HAL_UART_Transmit(&huart2, &cr, 1u, 10u);
+    }
+    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1u, 10u);
+    return ch;
+}
+
+/**
+ * @brief  Override of the HAL weak callback.
+ *         Called by the HAL on DMA IDLE, HT, or TC events for any UART.
+ *         Forward LPUART1 events to the SIM7600 driver.
+ */
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+    SIM7600_RxEventCallback(huart, Size);
+}
 
 /* USER CODE END 4 */
 

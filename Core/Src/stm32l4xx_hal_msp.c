@@ -650,6 +650,12 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
 
     /* USER CODE BEGIN LPUART1_MspInit 1 */
 
+    /* Enable LPUART1 global IRQ so the IDLE interrupt can fire.
+       IDLE detection is how HAL_UARTEx_ReceiveToIdle_DMA signals that
+       the modem has stopped sending — without this the callback never runs. */
+    HAL_NVIC_SetPriority(LPUART1_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(LPUART1_IRQn);
+
     /* USER CODE END LPUART1_MspInit 1 */
   }
   else if(huart->Instance==USART1)

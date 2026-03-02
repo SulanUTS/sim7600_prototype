@@ -1,0 +1,7 @@
+{
+  "board": "P-L496G-CELL02",
+  "device": "STM32L496AGI3",
+  "toolchain": "GCC",
+  "core": "Cortex-M4",
+  "order": 0
+}

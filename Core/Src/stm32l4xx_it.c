@@ -58,7 +58,7 @@
 extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
 extern DMA_HandleTypeDef hdma_lpuart_rx;
 /* USER CODE BEGIN EV */
-
+extern UART_HandleTypeDef hlpuart1;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -228,5 +228,15 @@ void DMA2_Channel7_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+
+/**
+ * @brief  LPUART1 global interrupt handler.
+ *         Required for HAL_UARTEx_ReceiveToIdle_DMA to detect the IDLE line
+ *         and fire HAL_UARTEx_RxEventCallback after each modem response.
+ */
+void LPUART1_IRQHandler(void)
+{
+    HAL_UART_IRQHandler(&hlpuart1);
+}
 
 /* USER CODE END 1 */
