@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "sim7600.h"
+#include <stdint.h>
 #include <stdio.h>
 /* USER CODE END Includes */
 
@@ -118,7 +119,8 @@ int main(void)
 
   /* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */  HAL_Init();
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */  
+  HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -156,33 +158,47 @@ int main(void)
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 
-  /* ── SIM7600G initialisation ──────────────────────────────────────────── */
 
   /* 1. Power on the modem (PWRKEY pulse + 8 s boot wait) */
-  SIM7600_PowerOn();
+  // SIM7600_PowerOn();
 
   /* 2. Start DMA receive — do this after power-on so boot URCs don't
         arrive before the driver is ready to handle them                 */
   SIM7600_Init(&hlpuart1);
 
-  char resp[SIM7600_RESP_BUF_SIZE];
+  char resp[256];
 
-  /* 3. Confirm the modem is alive — retry for up to 10 s (handles
-        slow boot and auto-baud sync, mirrors TinyGSM testAT())         */
-  if (SIM7600_TestAT(10000u) == SIM7600_OK)
-  {
-    /* 4. Disable echo so responses are easier to parse */
-    SIM7600_SendAT("E0", "OK", NULL, 0, SIM7600_TIMEOUT_SHORT);
+  // Basic check
+  SIM7600_SendAT("", "OK", NULL, 0, SIM7600_TIMEOUT_SHORT);
+  SIM7600_SendAT("E0", "OK", NULL, 0, SIM7600_TIMEOUT_SHORT); // echo off
 
-    /* 5. Check signal quality — response: "+CSQ: 18,0\r\nOK" */
-    SIM7600_SendAT("+CSQ", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT);
+  // SIM ready
+  SIM7600_SendAT("+CPIN?", "READY", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
 
-    /* 6. Check SIM card status */
-    SIM7600_SendAT("+CPIN?", "READY", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+  // Network signal and registration
+  SIM7600_SendAT("+CSQ", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT);
+  SIM7600_SendAT("+CREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+  SIM7600_SendAT("+CGREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+  SIM7600_SendAT("+CEREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
 
-    /* 7. Check network registration (0,1 = home, 0,5 = roaming) */
-    SIM7600_SendAT("+CREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
-  }
+  // Set PDP/APN for Hologram
+  SIM7600_SendAT("+CSTT=\"hologram\"", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM); // set APN
+  SIM7600_SendAT("+CIICR", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);              // bring up wireless
+  SIM7600_SendAT("+CIFSR", ".", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);             // check assigned IP
+        SIM7600_SendRawHTTPPost("httpbin.org", 80, "Hello, World!");  // typedef struct {
+  //   uint8_t a;
+  //   uint32_t b;
+  // } MyStruct;
+
+  // MyStruct s = { 5, 10 };
+  // uint8_t *p = &s.a;
+  // uint32_t *q = (p + 4);
+  // unsigned char buffer[sizeof(MyStruct)];
+  // memcpy(buffer, &s, sizeof(MyStruct));
+  // MyStruct *s_ptr = (MyStruct *)buffer;
+  // printf("Here is s.a: %p\n", &s.a);
+  // printf("Here is s.b: %d\n", *q);
+  // printf("Here is s_ptr: %d %d\n", s_ptr->a, s_ptr ->b);
 
   /* USER CODE END 2 */
 

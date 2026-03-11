@@ -1,27 +1,3 @@
-/* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file    sim7600.c
-  * @brief   SIM7600G AT command driver — LPUART1 + circular DMA RX
-  *
-  * Design notes
-  * ────────────
-  * HAL_UARTEx_ReceiveToIdle_DMA() is used to run a continuous circular DMA
-  * receive.  The DMA fires three kinds of events:
-  *
-  *   • IDLE  – modem stopped sending (fires HAL_UARTEx_RxEventCallback with
-  *             Size = bytes written so far in this DMA cycle)
-  *   • HT    – half-transfer (disabled in SIM7600_Init to reduce noise)
-  *   • TC    – full buffer filled; Size == SIM7600_DMA_BUF_SIZE, DMA head
-  *             wraps back to 0
-  *
-  * A tail-chase pointer (s_dma_prev) tracks where we last read from the
-  * circular DMA buffer.  Each callback drains the new bytes into s_resp_buf
-  * which SendAT then searches for the expected token.
-  ******************************************************************************
-  */
-/* USER CODE END Header */
-
 #include "sim7600.h"
 #include <string.h>
 #include <stdio.h>
@@ -30,19 +6,16 @@
 
 static UART_HandleTypeDef *s_huart = NULL;
 
-/* Raw circular DMA destination — written by DMA, read by drain_dma() */
 static uint8_t  s_dma_buf[SIM7600_DMA_BUF_SIZE];
 
-/* Accumulated modem response for the current SendAT call */
 static uint8_t  s_resp_buf[SIM7600_RESP_BUF_SIZE];
 static uint16_t s_resp_len = 0;
 
-/* Last position we drained up to in s_dma_buf (tail pointer) */
 static uint16_t s_dma_prev = 0;
 
 /* ── Private helpers ───────────────────────────────────────────────────────── */
 
-/** 
+/**
  * @brief  Append up to 'len' bytes from src into s_resp_buf, respecting the
  *         buffer limit and keeping it null-terminated.
  */
@@ -222,90 +195,6 @@ SIM7600_Status SIM7600_SendAT(const char *cmd,
     return SIM7600_TIMEOUT;
 }
 
-SIM7600_Status SIM7600_SendSMS(const char *number, const char *sms_body)
-{
-    char cmd[32];
-    snprintf(cmd, sizeof(cmd), "+CMGS=\"%s\"", number);
-
-    // Step 1: Send +CMGS and wait for '>'
-    SIM7600_Status status = SIM7600_SendAT(cmd, ">", NULL, 0, SIM7600_TIMEOUT_MEDIUM);
-    if (status != SIM7600_OK) return status;
-
-    // Step 2: Send actual message text (raw, no AT prepended)
-    HAL_UART_Transmit(s_huart, (uint8_t*)sms_body, strlen(sms_body), 1000);
-
-    // Step 3: Send Ctrl-Z to finalize
-    uint8_t ctrl_z = 0x1A;
-    HAL_UART_Transmit(s_huart, &ctrl_z, 1, 1000);
-
-    // Step 4: Wait for +CMGS: and OK
-    uint32_t t_start = HAL_GetTick();
-    char resp[128];
-    while ((HAL_GetTick() - t_start) < 20000) // 20s timeout
-    {
-        if (s_resp_len > 0)
-        {
-            if (strstr((char*)s_resp_buf, "+CMGS:") && strstr((char*)s_resp_buf, "OK"))
-            {
-                printf("[SIM] SMS Sent Successfully: %s\n", s_resp_buf);
-                return SIM7600_OK;
-            }
-            if (strstr((char*)s_resp_buf, "ERROR"))
-            {
-                printf("[SIM] SMS Failed: %s\n", s_resp_buf);
-                return SIM7600_ERROR;
-            }
-        }
-        HAL_Delay(1);
-    }
-
-    printf("[SIM] SMS Send Timeout\n");
-    return SIM7600_TIMEOUT;
-}
-
-
-SIM7600_Status SIM7600_SendRawHTTPPost(const char *host, uint16_t port, const char *payload)
-{
-    char resp[256];
-    char cmd[128];
-    SIM7600_Status status;
-
-    // 1. Create TCP connection
-    snprintf(cmd, sizeof(cmd), "+CIPSTART=\"TCP\",\"%s\",%d", host, port);
-    status = SIM7600_SendAT(cmd, "CONNECT OK", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);
-    if (status != SIM7600_OK) return status;
-
-    printf("[SIM] Connected to %s:%d\n", host, port);
-
-    // 2. Prepare raw HTTP POST
-    char http_request[512];
-    snprintf(http_request, sizeof(http_request),
-             "POST /post HTTP/1.1\r\n"
-             "Host: %s\r\n"
-             "Content-Type: text/plain\r\n"
-             "Content-Length: %d\r\n"
-             "\r\n"
-             "%s",
-             host, (int)strlen(payload), payload);
-
-    // 3. Send HTTP length
-    snprintf(cmd, sizeof(cmd), "+CIPSEND=%d", (int)strlen(http_request));
-    status = SIM7600_SendAT(cmd, ">", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
-    if (status != SIM7600_OK) return status;
-
-    // 4. Send the actual HTTP data
-    status = SIM7600_SendAT(http_request, "SEND OK", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);
-    if (status != SIM7600_OK) return status;
-
-    printf("[SIM] HTTP POST sent, response: %s\n", resp);
-
-    // 5. Close TCP
-    status = SIM7600_SendAT("+CIPCLOSE", "CLOSE OK", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT);
-    if (status != SIM7600_OK) return status;
-
-    printf("[SIM] TCP socket closed\n");
-    return SIM7600_OK;
-}
 /**
  * @brief  Called from the HAL_UARTEx_RxEventCallback() override in main.c.
  *         Drains new bytes from the circular DMA buffer.
