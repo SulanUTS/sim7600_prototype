@@ -299,39 +299,82 @@ SIM7600_Status SIM7600_SendRawHTTPPost(const char *host, uint16_t port, const ch
     // 4. Send raw HTTP data directly — SIM7600_SendAT cannot be used here because
     //    it prepends "AT" and truncates to 128 bytes. After the '>' prompt the modem
     //    expects raw bytes followed by SEND OK, same pattern as SMS Ctrl-Z.
+    //
+    // Atomic flush: disable interrupts so ISR cannot fire between clearing s_resp_len
+    // and s_resp_buf[0] — a GPS URC or other async byte arriving in that window would
+    // leave s_resp_buf[0]=='\0' with s_resp_len>0, making strstr blind to later data.
+    __disable_irq();
     s_resp_len = 0;
     s_resp_buf[0] = '\0';
-    HAL_UART_Transmit(s_huart, (uint8_t*)http_request, (uint16_t)strlen(http_request), 5000u);
+    uint16_t cur_pos2 = (uint16_t)(SIM7600_DMA_BUF_SIZE - __HAL_DMA_GET_COUNTER(s_huart->hdmarx));
+    s_dma_prev = cur_pos2 % SIM7600_DMA_BUF_SIZE;
+    __enable_irq();
 
+    HAL_StatusTypeDef tx_status = HAL_UART_Transmit(s_huart, (uint8_t*)http_request, (uint16_t)strlen(http_request), 5000u);
+    if (tx_status != HAL_OK)
+    {
+        printf("[SIM] HAL_UART_Transmit failed: %d\n", (int)tx_status);
+        return SIM7600_ERROR;
+    }
+
+    // SIM7600 confirms TCP send with "+CIPSEND: <conn>,<sent>,<acked>" — NOT "SEND OK".
+    // With Connection: close, the server response and "+IPCLOSE: 0,1" often arrive in
+    // the same DMA burst as the +CIPSEND confirm, so we handle it all in one loop.
     status = SIM7600_TIMEOUT;
     uint32_t t_send = HAL_GetTick();
     while ((HAL_GetTick() - t_send) < SIM7600_TIMEOUT_LONG)
     {
-        if (strstr((char*)s_resp_buf, "SEND OK"))  { status = SIM7600_OK;    break; }
-        if (strstr((char*)s_resp_buf, "ERROR"))    { status = SIM7600_ERROR; break; }
+        if (strstr((char*)s_resp_buf, "+CIPSEND:"))  { status = SIM7600_OK;    break; }
+        if (strstr((char*)s_resp_buf, "SEND FAIL"))  { status = SIM7600_ERROR; break; }
+        if (strstr((char*)s_resp_buf, "+IPCLOSE: 0,1"))
+        {
+            // Remote closed before we saw +CIPSEND — data was still sent; treat as OK.
+            status = SIM7600_OK;
+            break;
+        }
+        if (strstr((char*)s_resp_buf, "ERROR"))      { status = SIM7600_ERROR; break; }
         HAL_Delay(1u);
     }
-    if (status != SIM7600_OK) return status;
+    if (status != SIM7600_OK)
+    {
+        printf("[SIM] CIPSEND failed (status=%d), modem said: %s\n", status, (char*)s_resp_buf);
+        return status;
+    }
 
-    printf("[SIM] HTTP POST sent, waiting for server response...\n");
+    // 4b. Flush buffer so the response wait captures only the server's HTTP reply.
+    //     (The current buffer contains the echoed request which includes "HTTP/1.1",
+    //     so we must NOT search for HTTP version strings in the old buffer.)
+    //     With Connection: close, the server closes after replying → "+IPCLOSE: 0,1".
+    __disable_irq();
+    s_resp_len = 0;
+    s_resp_buf[0] = '\0';
+    uint16_t cur_pos3 = (uint16_t)(SIM7600_DMA_BUF_SIZE - __HAL_DMA_GET_COUNTER(s_huart->hdmarx));
+    s_dma_prev = cur_pos3 % SIM7600_DMA_BUF_SIZE;
+    __enable_irq();
 
-    // 4b. Wait for HTTP response — SIM7600 pushes received data as:
-    //     "+RECEIVE,0,<len>:\r\n<data>"
-    //     With Connection: close the server closes after sending, which also
-    //     triggers "+IPCLOSE: 0,1" (remote close). Wait for either.
     uint32_t t_rx = HAL_GetTick();
     while ((HAL_GetTick() - t_rx) < SIM7600_TIMEOUT_LONG)
     {
-        if (strstr((char*)s_resp_buf, "+RECEIVE,0,") ||
-            strstr((char*)s_resp_buf, "+IPCLOSE: 0,"))
+        if (strstr((char*)s_resp_buf, "+IPCLOSE: 0,"))
             break;
         HAL_Delay(1u);
     }
     printf("[SIM] HTTP response: %s\n", (char*)s_resp_buf);
 
-    // 5. Close TCP socket channel 0 — async response "+CIPCLOSE: 0,0"
-    status = SIM7600_SendAT("+CIPCLOSE=0", "+CIPCLOSE: 0,0", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT);
-    if (status != SIM7600_OK) return status;
+    if (strstr((char*)s_resp_buf, "HTTP/1.1 2") != NULL)
+        printf("[SIM] HTTP success (2xx)\n");
+    else if (strstr((char*)s_resp_buf, "HTTP/1.1") != NULL)
+        printf("[SIM] HTTP error — check status line above\n");
+    else
+        printf("[SIM] HTTP response not captured (buffer may have overflowed)\n");
+
+    // 5. Connection: close means the server already closed it (+IPCLOSE: 0,1).
+    //    Only send CIPCLOSE if still open.
+    if (strstr((char*)s_resp_buf, "+IPCLOSE:") == NULL)
+    {
+        status = SIM7600_SendAT("+CIPCLOSE=0", "+CIPCLOSE: 0,0", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT);
+        if (status != SIM7600_OK) return status;
+    }
 
     printf("[SIM] TCP socket closed\n");
     return SIM7600_OK;

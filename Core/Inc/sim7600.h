@@ -20,7 +20,7 @@ extern "C" {
 
 /* ── Buffer sizes ──────────────────────────────────────────────────────────── */
 #define SIM7600_DMA_BUF_SIZE    512u    /* Circular DMA RX buffer (power of 2) */
-#define SIM7600_RESP_BUF_SIZE   512u    /* Accumulated response buffer          */
+#define SIM7600_RESP_BUF_SIZE   2048u    /* Accumulated response buffer          */
 
 /* ── Default timeouts (ms) ─────────────────────────────────────────────────── */
 #define SIM7600_TIMEOUT_SHORT   1000u   /* AT, ATI, echo off, etc.             */
