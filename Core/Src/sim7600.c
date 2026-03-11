@@ -240,7 +240,6 @@ SIM7600_Status SIM7600_SendSMS(const char *number, const char *sms_body)
 
     // Step 4: Wait for +CMGS: and OK
     uint32_t t_start = HAL_GetTick();
-    char resp[128];
     while ((HAL_GetTick() - t_start) < 20000) // 20s timeout
     {
         if (s_resp_len > 0)
@@ -270,37 +269,68 @@ SIM7600_Status SIM7600_SendRawHTTPPost(const char *host, uint16_t port, const ch
     char cmd[128];
     SIM7600_Status status;
 
-    // 1. Create TCP connection
-    snprintf(cmd, sizeof(cmd), "+CIPSTART=\"TCP\",\"%s\",%d", host, port);
-    status = SIM7600_SendAT(cmd, "CONNECT OK", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);
+    // 1. Open TCP socket on channel 0 (SIM7600 uses CIPOPEN, not CIPSTART)
+    //    Response is async: "OK" arrives first, then "+CIPOPEN: 0,0" (0 = success)
+    snprintf(cmd, sizeof(cmd), "+CIPOPEN=0,\"TCP\",\"%s\",%d", host, port);
+    status = SIM7600_SendAT(cmd, "+CIPOPEN: 0,0", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);
     if (status != SIM7600_OK) return status;
 
     printf("[SIM] Connected to %s:%d\n", host, port);
 
     // 2. Prepare raw HTTP POST
+    //    Connection: close tells the server to close after responding so we know
+    //    when the response ends — required for HTTP/1.1 (keep-alive by default)
     char http_request[512];
     snprintf(http_request, sizeof(http_request),
              "POST /post HTTP/1.1\r\n"
              "Host: %s\r\n"
              "Content-Type: text/plain\r\n"
              "Content-Length: %d\r\n"
+             "Connection: close\r\n"
              "\r\n"
              "%s",
              host, (int)strlen(payload), payload);
 
-    // 3. Send HTTP length
-    snprintf(cmd, sizeof(cmd), "+CIPSEND=%d", (int)strlen(http_request));
+    // 3. Send HTTP length — channel 0 required on SIM7600
+    snprintf(cmd, sizeof(cmd), "+CIPSEND=0,%d", (int)strlen(http_request));
     status = SIM7600_SendAT(cmd, ">", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
     if (status != SIM7600_OK) return status;
 
-    // 4. Send the actual HTTP data
-    status = SIM7600_SendAT(http_request, "SEND OK", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);
+    // 4. Send raw HTTP data directly — SIM7600_SendAT cannot be used here because
+    //    it prepends "AT" and truncates to 128 bytes. After the '>' prompt the modem
+    //    expects raw bytes followed by SEND OK, same pattern as SMS Ctrl-Z.
+    s_resp_len = 0;
+    s_resp_buf[0] = '\0';
+    HAL_UART_Transmit(s_huart, (uint8_t*)http_request, (uint16_t)strlen(http_request), 5000u);
+
+    status = SIM7600_TIMEOUT;
+    uint32_t t_send = HAL_GetTick();
+    while ((HAL_GetTick() - t_send) < SIM7600_TIMEOUT_LONG)
+    {
+        if (strstr((char*)s_resp_buf, "SEND OK"))  { status = SIM7600_OK;    break; }
+        if (strstr((char*)s_resp_buf, "ERROR"))    { status = SIM7600_ERROR; break; }
+        HAL_Delay(1u);
+    }
     if (status != SIM7600_OK) return status;
 
-    printf("[SIM] HTTP POST sent, response: %s\n", resp);
+    printf("[SIM] HTTP POST sent, waiting for server response...\n");
 
-    // 5. Close TCP
-    status = SIM7600_SendAT("+CIPCLOSE", "CLOSE OK", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT);
+    // 4b. Wait for HTTP response — SIM7600 pushes received data as:
+    //     "+RECEIVE,0,<len>:\r\n<data>"
+    //     With Connection: close the server closes after sending, which also
+    //     triggers "+IPCLOSE: 0,1" (remote close). Wait for either.
+    uint32_t t_rx = HAL_GetTick();
+    while ((HAL_GetTick() - t_rx) < SIM7600_TIMEOUT_LONG)
+    {
+        if (strstr((char*)s_resp_buf, "+RECEIVE,0,") ||
+            strstr((char*)s_resp_buf, "+IPCLOSE: 0,"))
+            break;
+        HAL_Delay(1u);
+    }
+    printf("[SIM] HTTP response: %s\n", (char*)s_resp_buf);
+
+    // 5. Close TCP socket channel 0 — async response "+CIPCLOSE: 0,0"
+    status = SIM7600_SendAT("+CIPCLOSE=0", "+CIPCLOSE: 0,0", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT);
     if (status != SIM7600_OK) return status;
 
     printf("[SIM] TCP socket closed\n");

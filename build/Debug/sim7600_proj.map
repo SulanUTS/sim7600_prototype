@@ -7903,7 +7903,7 @@ Discarded input sections
  .text.SIM7600_TestAT
                 0x00000000       0x74 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
  .text.SIM7600_SendSMS
-                0x00000000      0x11c CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+                0x00000000      0x118 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
  .debug_macro   0x00000000      0x1dd CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
@@ -8285,7 +8285,7 @@ LOAD C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-st
                 0x080001b0                        . = ALIGN (0x8)
  *fill*         0x080001ac        0x4 
 
-.text           0x080001b0     0xf4a0
+.text           0x080001b0     0xf5f0
                 0x080001b0                        . = ALIGN (0x8)
  *(.text)
  .text          0x080001b0       0x40 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -9000,502 +9000,501 @@ LOAD C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-st
  .text.CDC_TransmitCplt_FS
                 0x0800bfd8       0x22 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
  *fill*         0x0800bffa        0x2 
- .text.main     0x0800bffc      0x174 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+ .text.main     0x0800bffc      0x204 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
                 0x0800bffc                main
  .text.SystemClock_Config
-                0x0800c170       0xc4 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
-                0x0800c170                SystemClock_Config
+                0x0800c200       0xc4 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c200                SystemClock_Config
  .text.PeriphCommonClock_Config
-                0x0800c234       0x6c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
-                0x0800c234                PeriphCommonClock_Config
+                0x0800c2c4       0x6c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c2c4                PeriphCommonClock_Config
  .text.MX_ADC1_Init
-                0x0800c2a0       0xec CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c330       0xec CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_ADC2_Init
-                0x0800c38c       0xc8 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c41c       0xc8 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_ADC3_Init
-                0x0800c454       0xc8 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c4e4       0xc8 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_DCMI_Init
-                0x0800c51c       0x68 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c5ac       0x68 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_DFSDM1_Init
-                0x0800c584       0xd8 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c614       0xd8 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_I2C1_Init
-                0x0800c65c       0x80 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c6ec       0x80 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_I2C2_Init
-                0x0800c6dc       0x80 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c76c       0x80 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_LPUART1_UART_Init
-                0x0800c75c       0x5c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c7ec       0x5c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_USART1_UART_Init
-                0x0800c7b8       0x60 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c848       0x60 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_USART2_UART_Init
-                0x0800c818       0x60 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c8a8       0x60 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_QUADSPI_Init
-                0x0800c878       0x58 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c908       0x58 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_SAI1_Init
-                0x0800c8d0      0x150 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800c960      0x150 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_SPI1_Init
-                0x0800ca20       0x7c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800cab0       0x7c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_SPI2_Init
-                0x0800ca9c       0x7c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800cb2c       0x7c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_DMA_Init
-                0x0800cb18       0x3c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800cba8       0x3c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_FMC_Init
-                0x0800cb54       0xc0 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800cbe4       0xc0 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.MX_GPIO_Init
-                0x0800cc14      0x2f0 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800cca4      0x2f0 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
  .text.__io_putchar
-                0x0800cf04       0x3c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
-                0x0800cf04                __io_putchar
+                0x0800cf94       0x3c CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800cf94                __io_putchar
  .text.HAL_UARTEx_RxEventCallback
-                0x0800cf40       0x1e CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
-                0x0800cf40                HAL_UARTEx_RxEventCallback
+                0x0800cfd0       0x1e CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800cfd0                HAL_UARTEx_RxEventCallback
  .text.Error_Handler
-                0x0800cf5e        0xc CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
-                0x0800cf5e                Error_Handler
+                0x0800cfee        0xc CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+                0x0800cfee                Error_Handler
  .text.NMI_Handler
-                0x0800cf6a        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cf6a                NMI_Handler
+                0x0800cffa        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800cffa                NMI_Handler
  .text.HardFault_Handler
-                0x0800cf72        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cf72                HardFault_Handler
+                0x0800d002        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d002                HardFault_Handler
  .text.MemManage_Handler
-                0x0800cf7a        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cf7a                MemManage_Handler
+                0x0800d00a        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d00a                MemManage_Handler
  .text.BusFault_Handler
-                0x0800cf82        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cf82                BusFault_Handler
+                0x0800d012        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d012                BusFault_Handler
  .text.UsageFault_Handler
-                0x0800cf8a        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cf8a                UsageFault_Handler
+                0x0800d01a        0x8 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d01a                UsageFault_Handler
  .text.SVC_Handler
-                0x0800cf92        0xe CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cf92                SVC_Handler
+                0x0800d022        0xe CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d022                SVC_Handler
  .text.DebugMon_Handler
-                0x0800cfa0        0xe CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cfa0                DebugMon_Handler
+                0x0800d030        0xe CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d030                DebugMon_Handler
  .text.PendSV_Handler
-                0x0800cfae        0xe CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cfae                PendSV_Handler
+                0x0800d03e        0xe CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d03e                PendSV_Handler
  .text.SysTick_Handler
-                0x0800cfbc        0xc CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cfbc                SysTick_Handler
+                0x0800d04c        0xc CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d04c                SysTick_Handler
  .text.OTG_FS_IRQHandler
-                0x0800cfc8       0x14 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cfc8                OTG_FS_IRQHandler
+                0x0800d058       0x14 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d058                OTG_FS_IRQHandler
  .text.DMA2_Channel7_IRQHandler
-                0x0800cfdc       0x14 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cfdc                DMA2_Channel7_IRQHandler
+                0x0800d06c       0x14 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d06c                DMA2_Channel7_IRQHandler
  .text.LPUART1_IRQHandler
-                0x0800cff0       0x14 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800cff0                LPUART1_IRQHandler
+                0x0800d080       0x14 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800d080                LPUART1_IRQHandler
  .text.HAL_MspInit
-                0x0800d004       0x48 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800d004                HAL_MspInit
+                0x0800d094       0x48 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800d094                HAL_MspInit
  .text.HAL_ADC_MspInit
-                0x0800d04c      0x1a0 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800d04c                HAL_ADC_MspInit
+                0x0800d0dc      0x1a0 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800d0dc                HAL_ADC_MspInit
  .text.HAL_DCMI_MspInit
-                0x0800d1ec      0x100 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800d1ec                HAL_DCMI_MspInit
+                0x0800d27c      0x100 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800d27c                HAL_DCMI_MspInit
  .text.HAL_DFSDM_ChannelMspInit
-                0x0800d2ec      0x110 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800d2ec                HAL_DFSDM_ChannelMspInit
+                0x0800d37c      0x110 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800d37c                HAL_DFSDM_ChannelMspInit
  .text.HAL_I2C_MspInit
-                0x0800d3fc      0x18c CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800d3fc                HAL_I2C_MspInit
+                0x0800d48c      0x18c CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800d48c                HAL_I2C_MspInit
  .text.HAL_UART_MspInit
-                0x0800d588      0x2cc CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800d588                HAL_UART_MspInit
+                0x0800d618      0x2cc CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800d618                HAL_UART_MspInit
  .text.HAL_QSPI_MspInit
-                0x0800d854       0xc4 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800d854                HAL_QSPI_MspInit
+                0x0800d8e4       0xc4 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800d8e4                HAL_QSPI_MspInit
  .text.HAL_SPI_MspInit
-                0x0800d918      0x160 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800d918                HAL_SPI_MspInit
+                0x0800d9a8      0x160 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800d9a8                HAL_SPI_MspInit
  .text.HAL_FMC_MspInit
-                0x0800da78       0xdc CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800db08       0xdc CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
  .text.HAL_SRAM_MspInit
-                0x0800db54       0x14 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800db54                HAL_SRAM_MspInit
+                0x0800dbe4       0x14 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800dbe4                HAL_SRAM_MspInit
  .text.HAL_SAI_MspInit
-                0x0800db68       0xf4 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x0800db68                HAL_SAI_MspInit
- .text._sbrk    0x0800dc5c       0x6c CMakeFiles/sim7600_proj.dir/Core/Src/sysmem.c.obj
-                0x0800dc5c                _sbrk
- .text._read    0x0800dcc8       0x3a CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
-                0x0800dcc8                _read
- .text._write   0x0800dd02       0x38 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
-                0x0800dd02                _write
- .text._close   0x0800dd3a       0x18 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
-                0x0800dd3a                _close
- .text._fstat   0x0800dd52       0x20 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
-                0x0800dd52                _fstat
- .text._isatty  0x0800dd72       0x16 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
-                0x0800dd72                _isatty
- .text._lseek   0x0800dd88       0x1a CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
-                0x0800dd88                _lseek
- *fill*         0x0800dda2        0x2 
+                0x0800dbf8       0xf4 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x0800dbf8                HAL_SAI_MspInit
+ .text._sbrk    0x0800dcec       0x6c CMakeFiles/sim7600_proj.dir/Core/Src/sysmem.c.obj
+                0x0800dcec                _sbrk
+ .text._read    0x0800dd58       0x3a CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
+                0x0800dd58                _read
+ .text._write   0x0800dd92       0x38 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
+                0x0800dd92                _write
+ .text._close   0x0800ddca       0x18 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
+                0x0800ddca                _close
+ .text._fstat   0x0800dde2       0x20 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
+                0x0800dde2                _fstat
+ .text._isatty  0x0800de02       0x16 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
+                0x0800de02                _isatty
+ .text._lseek   0x0800de18       0x1a CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
+                0x0800de18                _lseek
+ *fill*         0x0800de32        0x2 
  .text.Reset_Handler
-                0x0800dda4       0x50 CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
-                0x0800dda4                Reset_Handler
+                0x0800de34       0x50 CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
+                0x0800de34                Reset_Handler
  .text.Default_Handler
-                0x0800ddf4        0x2 CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
-                0x0800ddf4                RTC_Alarm_IRQHandler
-                0x0800ddf4                EXTI2_IRQHandler
-                0x0800ddf4                TIM8_TRG_COM_IRQHandler
-                0x0800ddf4                TIM8_CC_IRQHandler
-                0x0800ddf4                TIM1_CC_IRQHandler
-                0x0800ddf4                TSC_IRQHandler
-                0x0800ddf4                TAMP_STAMP_IRQHandler
-                0x0800ddf4                CAN2_RX1_IRQHandler
-                0x0800ddf4                EXTI3_IRQHandler
-                0x0800ddf4                LPTIM2_IRQHandler
-                0x0800ddf4                DFSDM1_FLT1_IRQHandler
-                0x0800ddf4                I2C3_ER_IRQHandler
-                0x0800ddf4                DFSDM1_FLT2_IRQHandler
-                0x0800ddf4                EXTI0_IRQHandler
-                0x0800ddf4                I2C2_EV_IRQHandler
-                0x0800ddf4                CAN1_RX0_IRQHandler
-                0x0800ddf4                FPU_IRQHandler
-                0x0800ddf4                TIM1_UP_TIM16_IRQHandler
-                0x0800ddf4                CAN2_SCE_IRQHandler
-                0x0800ddf4                ADC1_2_IRQHandler
-                0x0800ddf4                SPI1_IRQHandler
-                0x0800ddf4                TIM6_DAC_IRQHandler
-                0x0800ddf4                DCMI_IRQHandler
-                0x0800ddf4                CAN2_RX0_IRQHandler
-                0x0800ddf4                TIM8_UP_IRQHandler
-                0x0800ddf4                DMA2_Channel2_IRQHandler
-                0x0800ddf4                DMA1_Channel4_IRQHandler
-                0x0800ddf4                SAI2_IRQHandler
-                0x0800ddf4                DFSDM1_FLT3_IRQHandler
-                0x0800ddf4                USART3_IRQHandler
-                0x0800ddf4                DMA1_Channel7_IRQHandler
-                0x0800ddf4                CAN1_RX1_IRQHandler
-                0x0800ddf4                LCD_IRQHandler
-                0x0800ddf4                UART5_IRQHandler
-                0x0800ddf4                ADC3_IRQHandler
-                0x0800ddf4                TIM4_IRQHandler
-                0x0800ddf4                DMA2_Channel1_IRQHandler
-                0x0800ddf4                QUADSPI_IRQHandler
-                0x0800ddf4                I2C1_EV_IRQHandler
-                0x0800ddf4                DMA1_Channel6_IRQHandler
-                0x0800ddf4                UART4_IRQHandler
-                0x0800ddf4                DMA2_Channel4_IRQHandler
-                0x0800ddf4                TIM3_IRQHandler
-                0x0800ddf4                RCC_IRQHandler
-                0x0800ddf4                DMA1_Channel1_IRQHandler
-                0x0800ddf4                Default_Handler
-                0x0800ddf4                EXTI15_10_IRQHandler
-                0x0800ddf4                TIM7_IRQHandler
-                0x0800ddf4                SDMMC1_IRQHandler
-                0x0800ddf4                CAN2_TX_IRQHandler
-                0x0800ddf4                TIM5_IRQHandler
-                0x0800ddf4                I2C3_EV_IRQHandler
-                0x0800ddf4                EXTI9_5_IRQHandler
-                0x0800ddf4                RTC_WKUP_IRQHandler
-                0x0800ddf4                PVD_PVM_IRQHandler
-                0x0800ddf4                SPI2_IRQHandler
-                0x0800ddf4                CAN1_TX_IRQHandler
-                0x0800ddf4                DMA2_Channel5_IRQHandler
-                0x0800ddf4                CRS_IRQHandler
-                0x0800ddf4                DMA1_Channel5_IRQHandler
-                0x0800ddf4                EXTI4_IRQHandler
-                0x0800ddf4                RNG_IRQHandler
-                0x0800ddf4                TIM1_TRG_COM_TIM17_IRQHandler
-                0x0800ddf4                DMA1_Channel3_IRQHandler
-                0x0800ddf4                COMP_IRQHandler
-                0x0800ddf4                WWDG_IRQHandler
-                0x0800ddf4                I2C4_EV_IRQHandler
-                0x0800ddf4                DMA2_Channel6_IRQHandler
-                0x0800ddf4                TIM2_IRQHandler
-                0x0800ddf4                EXTI1_IRQHandler
-                0x0800ddf4                USART2_IRQHandler
-                0x0800ddf4                DFSDM1_FLT0_IRQHandler
-                0x0800ddf4                I2C2_ER_IRQHandler
-                0x0800ddf4                DMA1_Channel2_IRQHandler
-                0x0800ddf4                TIM8_BRK_IRQHandler
-                0x0800ddf4                CAN1_SCE_IRQHandler
-                0x0800ddf4                FLASH_IRQHandler
-                0x0800ddf4                USART1_IRQHandler
-                0x0800ddf4                SPI3_IRQHandler
-                0x0800ddf4                I2C1_ER_IRQHandler
-                0x0800ddf4                FMC_IRQHandler
-                0x0800ddf4                SWPMI1_IRQHandler
-                0x0800ddf4                LPTIM1_IRQHandler
-                0x0800ddf4                I2C4_ER_IRQHandler
-                0x0800ddf4                SAI1_IRQHandler
-                0x0800ddf4                DMA2_Channel3_IRQHandler
-                0x0800ddf4                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x0800ddf6        0x2 
+                0x0800de84        0x2 CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
+                0x0800de84                RTC_Alarm_IRQHandler
+                0x0800de84                EXTI2_IRQHandler
+                0x0800de84                TIM8_TRG_COM_IRQHandler
+                0x0800de84                TIM8_CC_IRQHandler
+                0x0800de84                TIM1_CC_IRQHandler
+                0x0800de84                TSC_IRQHandler
+                0x0800de84                TAMP_STAMP_IRQHandler
+                0x0800de84                CAN2_RX1_IRQHandler
+                0x0800de84                EXTI3_IRQHandler
+                0x0800de84                LPTIM2_IRQHandler
+                0x0800de84                DFSDM1_FLT1_IRQHandler
+                0x0800de84                I2C3_ER_IRQHandler
+                0x0800de84                DFSDM1_FLT2_IRQHandler
+                0x0800de84                EXTI0_IRQHandler
+                0x0800de84                I2C2_EV_IRQHandler
+                0x0800de84                CAN1_RX0_IRQHandler
+                0x0800de84                FPU_IRQHandler
+                0x0800de84                TIM1_UP_TIM16_IRQHandler
+                0x0800de84                CAN2_SCE_IRQHandler
+                0x0800de84                ADC1_2_IRQHandler
+                0x0800de84                SPI1_IRQHandler
+                0x0800de84                TIM6_DAC_IRQHandler
+                0x0800de84                DCMI_IRQHandler
+                0x0800de84                CAN2_RX0_IRQHandler
+                0x0800de84                TIM8_UP_IRQHandler
+                0x0800de84                DMA2_Channel2_IRQHandler
+                0x0800de84                DMA1_Channel4_IRQHandler
+                0x0800de84                SAI2_IRQHandler
+                0x0800de84                DFSDM1_FLT3_IRQHandler
+                0x0800de84                USART3_IRQHandler
+                0x0800de84                DMA1_Channel7_IRQHandler
+                0x0800de84                CAN1_RX1_IRQHandler
+                0x0800de84                LCD_IRQHandler
+                0x0800de84                UART5_IRQHandler
+                0x0800de84                ADC3_IRQHandler
+                0x0800de84                TIM4_IRQHandler
+                0x0800de84                DMA2_Channel1_IRQHandler
+                0x0800de84                QUADSPI_IRQHandler
+                0x0800de84                I2C1_EV_IRQHandler
+                0x0800de84                DMA1_Channel6_IRQHandler
+                0x0800de84                UART4_IRQHandler
+                0x0800de84                DMA2_Channel4_IRQHandler
+                0x0800de84                TIM3_IRQHandler
+                0x0800de84                RCC_IRQHandler
+                0x0800de84                DMA1_Channel1_IRQHandler
+                0x0800de84                Default_Handler
+                0x0800de84                EXTI15_10_IRQHandler
+                0x0800de84                TIM7_IRQHandler
+                0x0800de84                SDMMC1_IRQHandler
+                0x0800de84                CAN2_TX_IRQHandler
+                0x0800de84                TIM5_IRQHandler
+                0x0800de84                I2C3_EV_IRQHandler
+                0x0800de84                EXTI9_5_IRQHandler
+                0x0800de84                RTC_WKUP_IRQHandler
+                0x0800de84                PVD_PVM_IRQHandler
+                0x0800de84                SPI2_IRQHandler
+                0x0800de84                CAN1_TX_IRQHandler
+                0x0800de84                DMA2_Channel5_IRQHandler
+                0x0800de84                CRS_IRQHandler
+                0x0800de84                DMA1_Channel5_IRQHandler
+                0x0800de84                EXTI4_IRQHandler
+                0x0800de84                RNG_IRQHandler
+                0x0800de84                TIM1_TRG_COM_TIM17_IRQHandler
+                0x0800de84                DMA1_Channel3_IRQHandler
+                0x0800de84                COMP_IRQHandler
+                0x0800de84                WWDG_IRQHandler
+                0x0800de84                I2C4_EV_IRQHandler
+                0x0800de84                DMA2_Channel6_IRQHandler
+                0x0800de84                TIM2_IRQHandler
+                0x0800de84                EXTI1_IRQHandler
+                0x0800de84                USART2_IRQHandler
+                0x0800de84                DFSDM1_FLT0_IRQHandler
+                0x0800de84                I2C2_ER_IRQHandler
+                0x0800de84                DMA1_Channel2_IRQHandler
+                0x0800de84                TIM8_BRK_IRQHandler
+                0x0800de84                CAN1_SCE_IRQHandler
+                0x0800de84                FLASH_IRQHandler
+                0x0800de84                USART1_IRQHandler
+                0x0800de84                SPI3_IRQHandler
+                0x0800de84                I2C1_ER_IRQHandler
+                0x0800de84                FMC_IRQHandler
+                0x0800de84                SWPMI1_IRQHandler
+                0x0800de84                LPTIM1_IRQHandler
+                0x0800de84                I2C4_ER_IRQHandler
+                0x0800de84                SAI1_IRQHandler
+                0x0800de84                DMA2_Channel3_IRQHandler
+                0x0800de84                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x0800de86        0x2 
  .text.append_resp
-                0x0800ddf8       0x6c CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+                0x0800de88       0x6c CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
  .text.drain_dma
-                0x0800de64       0x78 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+                0x0800def4       0x78 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
  .text.SIM7600_Init
-                0x0800dedc       0x78 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
-                0x0800dedc                SIM7600_Init
+                0x0800df6c       0x78 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+                0x0800df6c                SIM7600_Init
  .text.SIM7600_SendAT
-                0x0800df54      0x1b0 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
-                0x0800df54                SIM7600_SendAT
+                0x0800dfe4      0x1b0 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+                0x0800dfe4                SIM7600_SendAT
  .text.SIM7600_SendRawHTTPPost
-                0x0800e104      0x1ac CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
-                0x0800e104                SIM7600_SendRawHTTPPost
+                0x0800e194      0x270 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+                0x0800e194                SIM7600_SendRawHTTPPost
  .text.SIM7600_RxEventCallback
-                0x0800e2b0       0x40 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
-                0x0800e2b0                SIM7600_RxEventCallback
- .text.std      0x0800e2f0       0x6c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x0800e404       0x40 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+                0x0800e404                SIM7600_RxEventCallback
+ .text.std      0x0800e444       0x6c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
  .text.stdio_exit_handler
-                0x0800e35c       0x18 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x0800e4b0       0x18 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
  .text.cleanup_stdio
-                0x0800e374       0x40 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x0800e4c8       0x40 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
  .text.global_stdio_init.part.0
-                0x0800e3b4       0x3c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x0800e508       0x3c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
  .text.__sfp_lock_acquire
-                0x0800e3f0        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
-                0x0800e3f0                __sfp_lock_acquire
+                0x0800e544        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x0800e544                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x0800e3fc        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
-                0x0800e3fc                __sfp_lock_release
- .text.__sinit  0x0800e408       0x30 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
-                0x0800e408                __sinit
+                0x0800e550        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x0800e550                __sfp_lock_release
+ .text.__sinit  0x0800e55c       0x30 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x0800e55c                __sinit
  .text._fwalk_sglue
-                0x0800e438       0x3c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fwalk.o)
-                0x0800e438                _fwalk_sglue
- .text.printf   0x0800e474       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-printf.o)
-                0x0800e474                iprintf
-                0x0800e474                printf
- .text._puts_r  0x0800e498       0xaa C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
-                0x0800e498                _puts_r
- *fill*         0x0800e542        0x2 
- .text.puts     0x0800e544       0x10 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
-                0x0800e544                puts
+                0x0800e58c       0x3c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fwalk.o)
+                0x0800e58c                _fwalk_sglue
+ .text.printf   0x0800e5c8       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-printf.o)
+                0x0800e5c8                iprintf
+                0x0800e5c8                printf
+ .text._puts_r  0x0800e5ec       0xaa C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
+                0x0800e5ec                _puts_r
+ *fill*         0x0800e696        0x2 
+ .text.puts     0x0800e698       0x10 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
+                0x0800e698                puts
  .text.snprintf
-                0x0800e554       0x6c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-snprintf.o)
-                0x0800e554                sniprintf
-                0x0800e554                snprintf
- .text.__sread  0x0800e5c0       0x22 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
-                0x0800e5c0                __sread
+                0x0800e6a8       0x6c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-snprintf.o)
+                0x0800e6a8                sniprintf
+                0x0800e6a8                snprintf
+ .text.__sread  0x0800e714       0x22 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x0800e714                __sread
  .text.__swrite
-                0x0800e5e2       0x38 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
-                0x0800e5e2                __swrite
- .text.__sseek  0x0800e61a       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
-                0x0800e61a                __sseek
+                0x0800e736       0x38 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x0800e736                __swrite
+ .text.__sseek  0x0800e76e       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x0800e76e                __sseek
  .text.__sclose
-                0x0800e63e        0x8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
-                0x0800e63e                __sclose
+                0x0800e792        0x8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x0800e792                __sclose
  .text.__swbuf_r
-                0x0800e646       0x7c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wbuf.o)
-                0x0800e646                __swbuf_r
- *fill*         0x0800e6c2        0x2 
+                0x0800e79a       0x7c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wbuf.o)
+                0x0800e79a                __swbuf_r
+ *fill*         0x0800e816        0x2 
  .text.__swsetup_r
-                0x0800e6c4       0xac C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wsetup.o)
-                0x0800e6c4                __swsetup_r
- .text.memset   0x0800e770       0x10 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
-                0x0800e770                memset
- .text.strncpy  0x0800e780       0x26 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strncpy.o)
-                0x0800e780                strncpy
- .text.strstr   0x0800e7a6       0x2c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strstr.o)
-                0x0800e7a6                strstr
- *fill*         0x0800e7d2        0x2 
+                0x0800e818       0xac C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wsetup.o)
+                0x0800e818                __swsetup_r
+ .text.memset   0x0800e8c4       0x10 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x0800e8c4                memset
+ .text.strncpy  0x0800e8d4       0x26 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strncpy.o)
+                0x0800e8d4                strncpy
+ .text.strstr   0x0800e8fa       0x2c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strstr.o)
+                0x0800e8fa                strstr
+ *fill*         0x0800e926        0x2 
  .text._close_r
-                0x0800e7d4       0x20 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-closer.o)
-                0x0800e7d4                _close_r
+                0x0800e928       0x20 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-closer.o)
+                0x0800e928                _close_r
  .text._lseek_r
-                0x0800e7f4       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lseekr.o)
-                0x0800e7f4                _lseek_r
- .text._read_r  0x0800e818       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-readr.o)
-                0x0800e818                _read_r
+                0x0800e948       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lseekr.o)
+                0x0800e948                _lseek_r
+ .text._read_r  0x0800e96c       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-readr.o)
+                0x0800e96c                _read_r
  .text._write_r
-                0x0800e83c       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-writer.o)
-                0x0800e83c                _write_r
- .text.__errno  0x0800e860        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
-                0x0800e860                __errno
+                0x0800e990       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-writer.o)
+                0x0800e990                _write_r
+ .text.__errno  0x0800e9b4        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
+                0x0800e9b4                __errno
  .text.__libc_init_array
-                0x0800e86c       0x48 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
-                0x0800e86c                __libc_init_array
+                0x0800e9c0       0x48 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x0800e9c0                __libc_init_array
  .text.__retarget_lock_init_recursive
-                0x0800e8b4        0x2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
-                0x0800e8b4                __retarget_lock_init_recursive
+                0x0800ea08        0x2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
+                0x0800ea08                __retarget_lock_init_recursive
  .text.__retarget_lock_acquire_recursive
-                0x0800e8b6        0x2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
-                0x0800e8b6                __retarget_lock_acquire_recursive
+                0x0800ea0a        0x2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
+                0x0800ea0a                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0800e8b8        0x2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
-                0x0800e8b8                __retarget_lock_release_recursive
- .text.memcpy   0x0800e8ba       0x1c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
-                0x0800e8ba                memcpy
- *fill*         0x0800e8d6        0x2 
- .text._free_r  0x0800e8d8       0x94 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-freer.o)
-                0x0800e8d8                _free_r
+                0x0800ea0c        0x2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
+                0x0800ea0c                __retarget_lock_release_recursive
+ .text.memcpy   0x0800ea0e       0x1c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
+                0x0800ea0e                memcpy
+ *fill*         0x0800ea2a        0x2 
+ .text._free_r  0x0800ea2c       0x94 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-freer.o)
+                0x0800ea2c                _free_r
  .text.sbrk_aligned
-                0x0800e96c       0x44 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
+                0x0800eac0       0x44 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
  .text._malloc_r
-                0x0800e9b0      0x100 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
-                0x0800e9b0                _malloc_r
+                0x0800eb04      0x100 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
+                0x0800eb04                _malloc_r
  .text.__malloc_lock
-                0x0800eab0        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
-                0x0800eab0                __malloc_lock
+                0x0800ec04        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
+                0x0800ec04                __malloc_lock
  .text.__malloc_unlock
-                0x0800eabc        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
-                0x0800eabc                __malloc_unlock
+                0x0800ec10        0xc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
+                0x0800ec10                __malloc_unlock
  .text.__ssputs_r
-                0x0800eac8       0xb6 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
-                0x0800eac8                __ssputs_r
- *fill*         0x0800eb7e        0x2 
+                0x0800ec1c       0xb6 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
+                0x0800ec1c                __ssputs_r
+ *fill*         0x0800ecd2        0x2 
  .text._svfprintf_r
-                0x0800eb80      0x1f8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
-                0x0800eb80                _svfiprintf_r
-                0x0800eb80                _svfprintf_r
+                0x0800ecd4      0x1f8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
+                0x0800ecd4                _svfiprintf_r
+                0x0800ecd4                _svfprintf_r
  .text.__sfputc_r
-                0x0800ed78       0x2e C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+                0x0800eecc       0x2e C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x0800eda6       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
-                0x0800eda6                __sfputs_r
- *fill*         0x0800edca        0x2 
+                0x0800eefa       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+                0x0800eefa                __sfputs_r
+ *fill*         0x0800ef1e        0x2 
  .text._vfprintf_r
-                0x0800edcc      0x230 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
-                0x0800edcc                _vfprintf_r
-                0x0800edcc                _vfiprintf_r
+                0x0800ef20      0x230 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+                0x0800ef20                _vfprintf_r
+                0x0800ef20                _vfiprintf_r
  .text._printf_common
-                0x0800effc       0xda C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x0800effc                _printf_common
- *fill*         0x0800f0d6        0x2 
+                0x0800f150       0xda C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0800f150                _printf_common
+ *fill*         0x0800f22a        0x2 
  .text._printf_i
-                0x0800f0d8      0x23c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x0800f0d8                _printf_i
+                0x0800f22c      0x23c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0800f22c                _printf_i
  .text.__sflush_r
-                0x0800f314      0x108 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
-                0x0800f314                __sflush_r
+                0x0800f468      0x108 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
+                0x0800f468                __sflush_r
  .text._fflush_r
-                0x0800f41c       0x50 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
-                0x0800f41c                _fflush_r
+                0x0800f570       0x50 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
+                0x0800f570                _fflush_r
  .text.__swhatbuf_r
-                0x0800f46c       0x4c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
-                0x0800f46c                __swhatbuf_r
+                0x0800f5c0       0x4c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
+                0x0800f5c0                __swhatbuf_r
  .text.__smakebuf_r
-                0x0800f4b8       0x78 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
-                0x0800f4b8                __smakebuf_r
- .text.memmove  0x0800f530       0x34 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memmove.o)
-                0x0800f530                memmove
+                0x0800f60c       0x78 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
+                0x0800f60c                __smakebuf_r
+ .text.memmove  0x0800f684       0x34 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memmove.o)
+                0x0800f684                memmove
  .text._fstat_r
-                0x0800f564       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fstatr.o)
-                0x0800f564                _fstat_r
+                0x0800f6b8       0x24 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fstatr.o)
+                0x0800f6b8                _fstat_r
  .text._isatty_r
-                0x0800f588       0x20 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-isattyr.o)
-                0x0800f588                _isatty_r
- .text._sbrk_r  0x0800f5a8       0x20 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-sbrkr.o)
-                0x0800f5a8                _sbrk_r
+                0x0800f6dc       0x20 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-isattyr.o)
+                0x0800f6dc                _isatty_r
+ .text._sbrk_r  0x0800f6fc       0x20 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-sbrkr.o)
+                0x0800f6fc                _sbrk_r
  .text._realloc_r
-                0x0800f5c8       0x5c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reallocr.o)
-                0x0800f5c8                _realloc_r
+                0x0800f71c       0x5c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reallocr.o)
+                0x0800f71c                _realloc_r
  .text._malloc_usable_size_r
-                0x0800f624       0x10 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
-                0x0800f624                _malloc_usable_size_r
+                0x0800f778       0x10 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
+                0x0800f778                _malloc_usable_size_r
  *(.glue_7)
- .glue_7        0x0800f634        0x0 linker stubs
+ .glue_7        0x0800f788        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800f634        0x0 linker stubs
+ .glue_7t       0x0800f788        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0800f634        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0800f788        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x0800f634        0x4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800f634                _init
- .init          0x0800f638        0x8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0800f788        0x4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800f788                _init
+ .init          0x0800f78c        0x8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0800f640        0x4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800f640                _fini
- .fini          0x0800f644        0x8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x0800f650                        . = ALIGN (0x8)
- *fill*         0x0800f64c        0x4 
-                0x0800f650                        _etext = .
+ .fini          0x0800f794        0x4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800f794                _fini
+ .fini          0x0800f798        0x8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0800f7a0                        . = ALIGN (0x8)
+                0x0800f7a0                        _etext = .
 
-.vfp11_veneer   0x0800f650        0x0
- .vfp11_veneer  0x0800f650        0x0 linker stubs
+.vfp11_veneer   0x0800f7a0        0x0
+ .vfp11_veneer  0x0800f7a0        0x0 linker stubs
 
-.v4_bx          0x0800f650        0x0
- .v4_bx         0x0800f650        0x0 linker stubs
+.v4_bx          0x0800f7a0        0x0
+ .v4_bx         0x0800f7a0        0x0 linker stubs
 
-.iplt           0x0800f650        0x0
- .iplt          0x0800f650        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0800f7a0        0x0
+ .iplt          0x0800f7a0        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x0800f650      0x3e0
-                0x0800f650                        . = ALIGN (0x8)
+.rodata         0x0800f7a0      0x4b8
+                0x0800f7a0                        . = ALIGN (0x8)
  *(.rodata)
- .rodata        0x0800f650       0x46 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_desc.c.obj
- *fill*         0x0800f696        0x2 
- .rodata        0x0800f698       0x80 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
- .rodata        0x0800f718      0x29c CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+ .rodata        0x0800f7a0       0x46 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_desc.c.obj
+ *fill*         0x0800f7e6        0x2 
+ .rodata        0x0800f7e8       0xe8 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+ .rodata        0x0800f8d0      0x30c CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x0800f9b4       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
-                0x0800f9b4                AHBPrescTable
+                0x0800fbdc       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
+                0x0800fbdc                AHBPrescTable
  .rodata.APBPrescTable
-                0x0800f9c4        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
-                0x0800f9c4                APBPrescTable
+                0x0800fbec        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
+                0x0800fbec                APBPrescTable
  .rodata.MSIRangeTable
-                0x0800f9cc       0x30 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
-                0x0800f9cc                MSIRangeTable
+                0x0800fbf4       0x30 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
+                0x0800fbf4                MSIRangeTable
  .rodata._svfprintf_r.str1.1
-                0x0800f9fc       0x33 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
+                0x0800fc24       0x33 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
                                  0x11 (size before relaxing)
  .rodata._vfprintf_r.str1.1
-                0x0800fa2f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+                0x0800fc57        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
                                  0x11 (size before relaxing)
  .rodata._printf_i.str1.1
-                0x0800fa2f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0800fc57        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
                                  0x22 (size before relaxing)
-                0x0800fa30                        . = ALIGN (0x8)
- *fill*         0x0800fa2f        0x1 
+                0x0800fc58                        . = ALIGN (0x8)
+ *fill*         0x0800fc57        0x1 
 
-.ARM.extab      0x0800fa30        0x0
-                0x0800fa30                        . = ALIGN (0x8)
+.ARM.extab      0x0800fc58        0x0
+                0x0800fc58                        . = ALIGN (0x8)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800fa30                        . = ALIGN (0x8)
+                0x0800fc58                        . = ALIGN (0x8)
 
-.ARM            0x0800fa30        0x8
-                0x0800fa30                        . = ALIGN (0x8)
-                0x0800fa30                        __exidx_start = .
+.ARM            0x0800fc58        0x8
+                0x0800fc58                        . = ALIGN (0x8)
+                0x0800fc58                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800fa30        0x8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .ARM.exidx     0x0800fa38        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strlen.o)
+ .ARM.exidx     0x0800fc58        0x8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0800fc60        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strlen.o)
                                   0x8 (size before relaxing)
- .ARM.exidx     0x0800fa38        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memchr.o)
+ .ARM.exidx     0x0800fc60        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memchr.o)
                                   0x8 (size before relaxing)
-                0x0800fa38                        __exidx_end = .
-                0x0800fa38                        . = ALIGN (0x8)
+                0x0800fc60                        __exidx_end = .
+                0x0800fc60                        . = ALIGN (0x8)
 
-.preinit_array  0x0800fa38        0x0
-                0x0800fa38                        . = ALIGN (0x8)
-                0x0800fa38                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0800fc60        0x0
+                0x0800fc60                        . = ALIGN (0x8)
+                0x0800fc60                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0800fa38                        PROVIDE (__preinit_array_end = .)
-                0x0800fa38                        . = ALIGN (0x8)
+                0x0800fc60                        PROVIDE (__preinit_array_end = .)
+                0x0800fc60                        . = ALIGN (0x8)
 
-.init_array     0x0800fa38        0x8
-                0x0800fa38                        . = ALIGN (0x8)
-                0x0800fa38                        PROVIDE (__init_array_start = .)
+.init_array     0x0800fc60        0x8
+                0x0800fc60                        . = ALIGN (0x8)
+                0x0800fc60                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0800fa38        0x4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0800fa3c                        PROVIDE (__init_array_end = .)
-                0x0800fa40                        . = ALIGN (0x8)
- *fill*         0x0800fa3c        0x4 
+ .init_array    0x0800fc60        0x4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0800fc64                        PROVIDE (__init_array_end = .)
+                0x0800fc68                        . = ALIGN (0x8)
+ *fill*         0x0800fc64        0x4 
 
-.fini_array     0x0800fa40        0x8
-                0x0800fa40                        . = ALIGN (0x8)
+.fini_array     0x0800fc68        0x8
+                0x0800fc68                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800fa40        0x4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x0800fc68        0x4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0800fa48                        . = ALIGN (0x8)
- *fill*         0x0800fa44        0x4 
-                0x0800fa48                        _sidata = LOADADDR (.data)
+                0x0800fc70                        . = ALIGN (0x8)
+ *fill*         0x0800fc6c        0x4 
+                0x0800fc70                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x0800fa48        0x0
- .rel.iplt      0x0800fa48        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0800fc70        0x0
+ .rel.iplt      0x0800fc70        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000      0x168 load address 0x0800fa48
+.data           0x20000000      0x168 load address 0x0800fc70
                 0x20000000                        . = ALIGN (0x8)
                 0x20000000                        _sdata = .
  *(.data)
@@ -9556,10 +9555,10 @@ LOAD C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-st
  *(.RamFunc*)
                 0x20000168                        . = ALIGN (0x8)
 
-.igot.plt       0x20000168        0x0 load address 0x0800fbb0
+.igot.plt       0x20000168        0x0 load address 0x0800fdd8
  .igot.plt      0x20000168        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x20000168        0x0 load address 0x0800fbb0
+.tdata          0x20000168        0x0 load address 0x0800fdd8
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x20000168                        . = ALIGN (0x4)
                 0x20000168                        _edata = .
@@ -9576,7 +9575,7 @@ LOAD C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-st
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x20000168        0x0 load address 0x0800fbb0
+.tbss           0x20000168        0x0 load address 0x0800fdd8
                 0x20000168                        _sbss = .
                 0x20000168                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -9593,7 +9592,7 @@ LOAD C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-st
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x20000168     0x2890 load address 0x0800fbb0
+.bss            0x20000168     0x2890 load address 0x0800fdd8
  *(.bss)
  .bss           0x20000168       0x1c C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
@@ -9711,7 +9710,7 @@ LOAD C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-st
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x200029f8      0x600 load address 0x0800fbb0
+                0x200029f8      0x600 load address 0x0800fdd8
                 0x200029f8                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x200029f8                        PROVIDE (_end = .)
@@ -10047,7 +10046,7 @@ LOAD linker stubs
  .comment       0x00000043        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
                                  0x44 (size before relaxing)
 
-.debug_info     0x00000000    0x3b69e
+.debug_info     0x00000000    0x3b6ac
  .debug_info    0x00000000      0x5fe cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
  .debug_info    0x000005fe     0x14fd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c.obj
  .debug_info    0x00001afb      0x8d2 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c.obj
@@ -10087,44 +10086,44 @@ LOAD linker stubs
  .debug_info    0x00029128      0x168 CMakeFiles/sim7600_proj.dir/Core/Src/sysmem.c.obj
  .debug_info    0x00029290      0x6b4 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
  .debug_info    0x00029944       0x30 CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
- .debug_info    0x00029974      0xc5b CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
- .debug_info    0x0002a5cf      0xfb5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
- .debug_info    0x0002b584      0x7d2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fwalk.o)
- .debug_info    0x0002bd56      0x841 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-printf.o)
- .debug_info    0x0002c597      0x950 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
- .debug_info    0x0002cee7      0x8b9 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-snprintf.o)
- .debug_info    0x0002d7a0      0xa90 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
- .debug_info    0x0002e230      0x874 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wbuf.o)
- .debug_info    0x0002eaa4      0x7bb C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wsetup.o)
- .debug_info    0x0002f25f       0xe0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_info    0x0002f33f      0x111 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strncpy.o)
- .debug_info    0x0002f450       0xe9 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strstr.o)
- .debug_info    0x0002f539      0x75d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-closer.o)
- .debug_info    0x0002fc96      0x8a1 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reent.o)
- .debug_info    0x00030537      0x715 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-impure.o)
- .debug_info    0x00030c4c      0x7a8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lseekr.o)
- .debug_info    0x000313f4      0x7bf C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-readr.o)
- .debug_info    0x00031bb3      0x7c5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-writer.o)
- .debug_info    0x00032378      0x6fb C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
- .debug_info    0x00032a73      0x10b C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
- .debug_info    0x00032b7e      0x218 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
- .debug_info    0x00032d96      0x121 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
- .debug_info    0x00032eb7       0x31 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strlen.o)
- .debug_info    0x00032ee8      0x851 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-freer.o)
- .debug_info    0x00033739      0x9bc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
- .debug_info    0x000340f5      0x76b C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
- .debug_info    0x00034860     0x10c7 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
- .debug_info    0x00035927     0x1094 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_info    0x000369bb      0xde2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_info    0x0003779d      0x9f2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
- .debug_info    0x0003818f      0xb1a C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
- .debug_info    0x00038ca9      0x10f C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memmove.o)
- .debug_info    0x00038db8      0x981 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fstatr.o)
- .debug_info    0x00039739      0x75d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-isattyr.o)
- .debug_info    0x00039e96      0x782 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-sbrkr.o)
- .debug_info    0x0003a618       0x25 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memchr.o)
- .debug_info    0x0003a63d      0x8cd C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reallocr.o)
- .debug_info    0x0003af0a      0x794 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
+ .debug_info    0x00029974      0xc69 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+ .debug_info    0x0002a5dd      0xfb5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+ .debug_info    0x0002b592      0x7d2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fwalk.o)
+ .debug_info    0x0002bd64      0x841 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-printf.o)
+ .debug_info    0x0002c5a5      0x950 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
+ .debug_info    0x0002cef5      0x8b9 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-snprintf.o)
+ .debug_info    0x0002d7ae      0xa90 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
+ .debug_info    0x0002e23e      0x874 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wbuf.o)
+ .debug_info    0x0002eab2      0x7bb C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wsetup.o)
+ .debug_info    0x0002f26d       0xe0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_info    0x0002f34d      0x111 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strncpy.o)
+ .debug_info    0x0002f45e       0xe9 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strstr.o)
+ .debug_info    0x0002f547      0x75d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-closer.o)
+ .debug_info    0x0002fca4      0x8a1 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reent.o)
+ .debug_info    0x00030545      0x715 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-impure.o)
+ .debug_info    0x00030c5a      0x7a8 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lseekr.o)
+ .debug_info    0x00031402      0x7bf C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-readr.o)
+ .debug_info    0x00031bc1      0x7c5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-writer.o)
+ .debug_info    0x00032386      0x6fb C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
+ .debug_info    0x00032a81      0x10b C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_info    0x00032b8c      0x218 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
+ .debug_info    0x00032da4      0x121 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_info    0x00032ec5       0x31 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strlen.o)
+ .debug_info    0x00032ef6      0x851 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-freer.o)
+ .debug_info    0x00033747      0x9bc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
+ .debug_info    0x00034103      0x76b C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
+ .debug_info    0x0003486e     0x10c7 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_info    0x00035935     0x1094 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_info    0x000369c9      0xde2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_info    0x000377ab      0x9f2 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
+ .debug_info    0x0003819d      0xb1a C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
+ .debug_info    0x00038cb7      0x10f C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memmove.o)
+ .debug_info    0x00038dc6      0x981 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fstatr.o)
+ .debug_info    0x00039747      0x75d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-isattyr.o)
+ .debug_info    0x00039ea4      0x782 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .debug_info    0x0003a626       0x25 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memchr.o)
+ .debug_info    0x0003a64b      0x8cd C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reallocr.o)
+ .debug_info    0x0003af18      0x794 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
 
 .debug_abbrev   0x00000000     0x9d38
  .debug_abbrev  0x00000000      0x117 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
@@ -10668,7 +10667,7 @@ LOAD linker stubs
  .debug_macro   0x00033b54       0x10 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
  .debug_macro   0x00033b64       0x1c CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
 
-.debug_line     0x00000000    0x35de3
+.debug_line     0x00000000    0x35e6f
  .debug_line    0x00000000      0xa70 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
  .debug_line    0x00000a70     0x15b9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c.obj
  .debug_line    0x00002029      0xbd8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c.obj
@@ -10702,205 +10701,205 @@ LOAD linker stubs
  .debug_line    0x000285e4      0xccf CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usb_device.c.obj
  .debug_line    0x000292b3      0xd40 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_desc.c.obj
  .debug_line    0x00029ff3      0xd22 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
- .debug_line    0x0002ad15     0x1425 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
- .debug_line    0x0002c13a      0xab1 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
- .debug_line    0x0002cbeb     0x106f CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
- .debug_line    0x0002dc5a      0x41b CMakeFiles/sim7600_proj.dir/Core/Src/sysmem.c.obj
- .debug_line    0x0002e075      0x73f CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
- .debug_line    0x0002e7b4       0x7a CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
- .debug_line    0x0002e82e      0xd92 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
- .debug_line    0x0002f5c0      0x5c0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
- .debug_line    0x0002fb80      0x23d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fwalk.o)
- .debug_line    0x0002fdbd      0x259 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-printf.o)
- .debug_line    0x00030016      0x354 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
- .debug_line    0x0003036a      0x365 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-snprintf.o)
- .debug_line    0x000306cf      0x2e9 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
- .debug_line    0x000309b8      0x2cf C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wbuf.o)
- .debug_line    0x00030c87      0x2e6 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wsetup.o)
- .debug_line    0x00030f6d      0x17e C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_line    0x000310eb      0x1a4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strncpy.o)
- .debug_line    0x0003128f      0x1be C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strstr.o)
- .debug_line    0x0003144d      0x21f C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-closer.o)
- .debug_line    0x0003166c      0x2f5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reent.o)
- .debug_line    0x00031961      0x163 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-impure.o)
- .debug_line    0x00031ac4      0x21e C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lseekr.o)
- .debug_line    0x00031ce2      0x21d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-readr.o)
- .debug_line    0x00031eff      0x21e C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-writer.o)
- .debug_line    0x0003211d      0x185 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
- .debug_line    0x000322a2      0x170 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
- .debug_line    0x00032412      0x19b C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
- .debug_line    0x000325ad      0x202 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
- .debug_line    0x000327af       0x4f C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strlen.o)
- .debug_line    0x000327fe      0x30d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-freer.o)
- .debug_line    0x00032b0b      0x4e5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
- .debug_line    0x00032ff0      0x1ed C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
- .debug_line    0x000331dd      0x871 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
- .debug_line    0x00033a4e      0x6c5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_line    0x00034113      0x70d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_line    0x00034820      0x464 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
- .debug_line    0x00034c84      0x3b6 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
- .debug_line    0x0003503a      0x1bc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memmove.o)
- .debug_line    0x000351f6      0x2b3 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fstatr.o)
- .debug_line    0x000354a9      0x220 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-isattyr.o)
- .debug_line    0x000356c9      0x21f C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-sbrkr.o)
- .debug_line    0x000358e8       0x84 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memchr.o)
- .debug_line    0x0003596c      0x272 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reallocr.o)
- .debug_line    0x00035bde      0x205 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
+ .debug_line    0x0002ad15     0x142b CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+ .debug_line    0x0002c140      0xab1 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_line    0x0002cbf1     0x106f CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_line    0x0002dc60      0x41b CMakeFiles/sim7600_proj.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x0002e07b      0x73f CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x0002e7ba       0x7a CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
+ .debug_line    0x0002e834      0xe18 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+ .debug_line    0x0002f64c      0x5c0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+ .debug_line    0x0002fc0c      0x23d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fwalk.o)
+ .debug_line    0x0002fe49      0x259 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-printf.o)
+ .debug_line    0x000300a2      0x354 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
+ .debug_line    0x000303f6      0x365 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-snprintf.o)
+ .debug_line    0x0003075b      0x2e9 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
+ .debug_line    0x00030a44      0x2cf C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wbuf.o)
+ .debug_line    0x00030d13      0x2e6 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wsetup.o)
+ .debug_line    0x00030ff9      0x17e C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_line    0x00031177      0x1a4 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strncpy.o)
+ .debug_line    0x0003131b      0x1be C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strstr.o)
+ .debug_line    0x000314d9      0x21f C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-closer.o)
+ .debug_line    0x000316f8      0x2f5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reent.o)
+ .debug_line    0x000319ed      0x163 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-impure.o)
+ .debug_line    0x00031b50      0x21e C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lseekr.o)
+ .debug_line    0x00031d6e      0x21d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-readr.o)
+ .debug_line    0x00031f8b      0x21e C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-writer.o)
+ .debug_line    0x000321a9      0x185 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
+ .debug_line    0x0003232e      0x170 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_line    0x0003249e      0x19b C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
+ .debug_line    0x00032639      0x202 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_line    0x0003283b       0x4f C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strlen.o)
+ .debug_line    0x0003288a      0x30d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-freer.o)
+ .debug_line    0x00032b97      0x4e5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
+ .debug_line    0x0003307c      0x1ed C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
+ .debug_line    0x00033269      0x871 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_line    0x00033ada      0x6c5 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_line    0x0003419f      0x70d C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_line    0x000348ac      0x464 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
+ .debug_line    0x00034d10      0x3b6 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
+ .debug_line    0x000350c6      0x1bc C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memmove.o)
+ .debug_line    0x00035282      0x2b3 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fstatr.o)
+ .debug_line    0x00035535      0x220 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-isattyr.o)
+ .debug_line    0x00035755      0x21f C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .debug_line    0x00035974       0x84 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memchr.o)
+ .debug_line    0x000359f8      0x272 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reallocr.o)
+ .debug_line    0x00035c6a      0x205 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
 
-.debug_str      0x00000000   0x12928f
- .debug_str     0x00000000   0x12928f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
+.debug_str      0x00000000   0x129296
+ .debug_str     0x00000000   0x129296 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32l4xx.c.obj
                              0x114858 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c.obj
                              0x1152cc (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c.obj
                              0x114c9a (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c.obj
                              0x114f86 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
                              0x115475 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
                              0x114ea5 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
                              0x115252 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
                              0x1149e4 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
                              0x115a4c (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
                              0x114d6b (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
                              0x114ac7 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
                              0x114bcf (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
                              0x114da7 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
                              0x115133 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc.c.obj
                              0x1156da (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c.obj
                              0x115683 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dcmi.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dcmi.c.obj
                              0x114f41 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c.obj
                              0x115769 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_fmc.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_fmc.c.obj
                              0x114d29 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sram.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sram.c.obj
                              0x114d7f (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
                              0x1155b0 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
                              0x114da7 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.c.obj
                              0x1151ac (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai.c.obj
                              0x114fe8 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c.obj
                              0x115066 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
                              0x11a36b (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
                              0x11a196 (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
                              0x11a06b (size before relaxing)
- .debug_str     0x0012928f        0x0 cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj
+ .debug_str     0x00129296        0x0 cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/__/__/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj
                              0x11aa5d (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/USB_DEVICE/Target/usbd_conf.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/USB_DEVICE/Target/usbd_conf.c.obj
                              0x11b3fc (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usb_device.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usb_device.c.obj
                              0x11a41e (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_desc.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_desc.c.obj
                              0x119f8d (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
                              0x11a45e (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/main.c.obj
                              0x11c406 (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_it.c.obj
                              0x11669b (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/stm32l4xx_hal_msp.c.obj
                              0x1180ad (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/sysmem.c.obj
                                0x716e (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/syscalls.c.obj
                                0x9475 (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/startup_stm32l496xx.s.obj
                                  0xba (size before relaxing)
- .debug_str     0x0012928f        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
-                             0x1197f4 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
+ .debug_str     0x00129296        0x0 CMakeFiles/sim7600_proj.dir/Core/Src/sim7600.c.obj
+                             0x119800 (size before relaxing)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-findfp.o)
                                 0x7b4 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fwalk.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fwalk.o)
                                 0x541 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-printf.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-printf.o)
                                 0x56c (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-puts.o)
                                 0x5bc (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-snprintf.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-snprintf.o)
                                 0x57f (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-stdio.o)
                                 0x59e (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wbuf.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wbuf.o)
                                 0x567 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wsetup.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-wsetup.o)
                                 0x562 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
                                 0x211 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strncpy.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strncpy.o)
                                 0x22f (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strstr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strstr.o)
                                 0x211 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-closer.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-closer.o)
                                 0x527 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reent.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reent.o)
                                 0x550 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-impure.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-impure.o)
                                 0x531 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lseekr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lseekr.o)
                                 0x535 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-readr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-readr.o)
                                 0x535 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-writer.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-writer.o)
                                 0x537 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
                                 0x52b (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
                                 0x272 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-lock.o)
                                 0x3a8 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
                                 0x22f (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strlen.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-strlen.o)
                                  0xf3 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-freer.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-freer.o)
                                 0x5b1 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mallocr.o)
                                 0x612 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-mlock.o)
                                 0x5b3 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-svfprintf.o)
                                 0x87a (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
                                 0x8e2 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
                                 0x810 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fflush.o)
                                 0x5fc (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-makebuf.o)
                                 0x6c4 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memmove.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memmove.o)
                                 0x22c (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fstatr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-fstatr.o)
                                 0x679 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-isattyr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-isattyr.o)
                                 0x531 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-sbrkr.o)
                                 0x53a (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memchr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memchr.o)
                                  0xe2 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reallocr.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-reallocr.o)
                                 0x5a7 (size before relaxing)
- .debug_str     0x0012928f        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
+ .debug_str     0x00129296        0x0 C:/Users/sulan.pathiranage/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-msizer.o)
                                 0x57a (size before relaxing)
 
 .debug_frame    0x00000000     0xa354

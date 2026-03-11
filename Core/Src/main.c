@@ -180,12 +180,21 @@ int main(void)
   SIM7600_SendAT("+CREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
   SIM7600_SendAT("+CGREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
   SIM7600_SendAT("+CEREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+  SIM7600_SendAT("+CEREG?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+  SIM7600_SendAT("+CGPS=1", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+  SIM7600_SendAT("+CGPSINFO", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
 
-  // Set PDP/APN for Hologram
-  SIM7600_SendAT("+CSTT=\"hologram\"", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM); // set APN
-  SIM7600_SendAT("+CIICR", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);              // bring up wireless
-  SIM7600_SendAT("+CIFSR", ".", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);             // check assigned IP
-        SIM7600_SendRawHTTPPost("httpbin.org", 80, "Hello, World!");  // typedef struct {
+  // Set PDP context with Hologram APN (SIM7600 native commands)
+  SIM7600_SendAT("+CGDCONT=1,\"IP\",\"hologram\"", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+  SIM7600_SendAT("+CGACT=1,1", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);   // may ERROR if already active — OK
+  SIM7600_SendAT("+NETOPEN", "+NETOPEN: 0", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);   // open network service; may error if already open
+  SIM7600_SendAT("+CDNSCFG=\"8.8.8.8\",\"8.8.4.4\"", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT); // Hologram APN doesn't push DNS
+  SIM7600_SendAT("+IPADDR", "+IPADDR:", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);     // verify IP assigned
+
+  SIM7600_SendRawHTTPPost("httpbin.org", 80, "Hello, World!");
+  SIM7600_SendAT("+CGPS=0", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
+
+  // typedef struct {
   //   uint8_t a;
   //   uint32_t b;
   // } MyStruct;
