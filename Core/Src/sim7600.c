@@ -263,80 +263,6 @@ SIM7600_Status SIM7600_SendSMS(const char *number, const char *sms_body)
 }
 #define HTTP_MAX_RESP 512
 
-SIM7600_Status SIM7600_HTTPPost1(const char *url,
-                                const char *payload,
-                                char *resp_buf,
-                                uint16_t resp_buf_len)
-{
-    char at_resp[256];
-    SIM7600_Status status;
-    int data_len = 0;
-
-    if (!url || !payload || !resp_buf || resp_buf_len == 0)
-        return SIM7600_ERROR;
-
-    // 1. Set HTTP SSL mode off (plain HTTP; set 1 for HTTPS)
-    status = SIM7600_SendAT("+HTTPSSL=0", "OK", at_resp, sizeof(at_resp), 2000);
-    if (status != SIM7600_OK) return status;
-
-    // 2. Initialize HTTP service
-    status = SIM7600_SendAT("+HTTPINIT", "OK", at_resp, sizeof(at_resp), 5000);
-    if (status != SIM7600_OK) return status;
-
-    // 3. Set PDP context ID
-    status = SIM7600_SendAT("+HTTPPARA=\"CID\",1", "OK", at_resp, sizeof(at_resp), 2000);
-    if (status != SIM7600_OK) goto cleanup;
-
-    // 4. Set URL
-    char cmd[256];
-    snprintf(cmd, sizeof(cmd), "+HTTPPARA=\"URL\",\"%s\"", url);
-    status = SIM7600_SendAT(cmd, "OK", at_resp, sizeof(at_resp), 2000);
-    if (status != SIM7600_OK) goto cleanup;
-
-    // 5. Set content type
-    status = SIM7600_SendAT("+HTTPPARA=\"CONTENT\",\"text/plain\"", "OK", at_resp, sizeof(at_resp), 2000);
-    if (status != SIM7600_OK) goto cleanup;
-
-    // 6. Send payload
-    snprintf(cmd, sizeof(cmd), "+HTTPDATA=%d,10000", (int)strlen(payload));
-    status = SIM7600_SendAT(cmd, "DOWNLOAD", at_resp, sizeof(at_resp), 5000);
-    if (status != SIM7600_OK) goto cleanup;
-
-    // Transmit payload
-    HAL_UART_Transmit(s_huart, (uint8_t*)payload, (uint16_t)strlen(payload), 5000);
-
-    // 7. Execute POST
-    status = SIM7600_SendAT("+HTTPACTION=1", "+HTTPACTION:", at_resp, sizeof(at_resp), 15000);
-    if (status != SIM7600_OK) goto cleanup;
-
-    // Parse data length from +HTTPACTION response
-    int status_code = 0;
-    if (sscanf(at_resp, "+HTTPACTION:%*d,%d,%d", &status_code, &data_len) != 2)
-    {
-        printf("[SIM] Failed to parse +HTTPACTION response: %s\n", at_resp);
-        status = SIM7600_ERROR;
-        goto cleanup;
-    }
-    printf("[SIM] HTTP POST returned status %d, data length %d\n", status_code, data_len);
-
-    // 8. Read HTTP response
-    if (data_len > 0)
-    {
-        if ((uint16_t)data_len > resp_buf_len - 1) data_len = resp_buf_len - 1; // truncate if too long
-        snprintf(cmd, sizeof(cmd), "+HTTPREAD=0,%d", data_len);
-        status = SIM7600_SendAT(cmd, "OK", resp_buf, resp_buf_len, 10000);
-        if (status != SIM7600_OK) goto cleanup;
-    }
-    else
-    {
-        resp_buf[0] = '\0'; // no response body
-    }
-
-cleanup:
-    SIM7600_SendAT("+HTTPTERM", "OK", at_resp, sizeof(at_resp), 5000);
-    return status;
-}
-
 SIM7600_Status SIM7600_HTTPPost(const char *url, const char *payload, char *resp_buf, uint16_t resp_buf_len)
 {
     char at_resp[256];
@@ -344,34 +270,32 @@ SIM7600_Status SIM7600_HTTPPost(const char *url, const char *payload, char *resp
 
     // 1. Initialize HTTP service
     status = SIM7600_SendAT("+HTTPINIT", "OK", at_resp, sizeof(at_resp), 5000);
-    if (status != SIM7600_OK) return status;
+    // if (status != SIM7600_OK) return status;
 
-    // 2. Set PDP context ID (usually 1)
-    status = SIM7600_SendAT("+HTTPPARA=\"CID\",1", "OK", at_resp, sizeof(at_resp), 2000);
-    if (status != SIM7600_OK) goto cleanup;
+
 
     // 3. Set target URL
     char cmd[256];
     snprintf(cmd, sizeof(cmd), "+HTTPPARA=\"URL\",\"%s\"", url);
     status = SIM7600_SendAT(cmd, "OK", at_resp, sizeof(at_resp), 2000);
-    if (status != SIM7600_OK) goto cleanup;
+    // if (status != SIM7600_OK) goto cleanup;
 
-    // 4. Set content type
-    snprintf(cmd, sizeof(cmd), "+HTTPPARA=\"CONTENT\",\"text/plain\"");
-    status = SIM7600_SendAT(cmd, "OK", at_resp, sizeof(at_resp), 2000);
-    if (status != SIM7600_OK) goto cleanup;
+    // // 4. Set content type
+    // snprintf(cmd, sizeof(cmd), "+HTTPPARA=\"CONTENT\",\"text/plain\"");
+    // status = SIM7600_SendAT(cmd, "OK", at_resp, sizeof(at_resp), 2000);
+    // // if (status != SIM7600_OK) goto cleanup;
 
     // 5. Send data
     snprintf(cmd, sizeof(cmd), "+HTTPDATA=%d,10000", (int)strlen(payload)); // 10s timeout
     status = SIM7600_SendAT(cmd, "DOWNLOAD", at_resp, sizeof(at_resp), 5000);
-    if (status != SIM7600_OK) goto cleanup;
+    // if (status != SIM7600_OK) goto cleanup;
 
     // 5b. Transmit payload
     HAL_UART_Transmit(s_huart, (uint8_t*)payload, (uint16_t)strlen(payload), 5000);
 
     // 6. Execute HTTP POST (1 = POST)
     status = SIM7600_SendAT("+HTTPACTION=1", "+HTTPACTION:", at_resp, sizeof(at_resp), 15000);
-    if (status != SIM7600_OK) goto cleanup;
+    // if (status != SIM7600_OK) goto cleanup;
 
     // 6b. Parse HTTPACTION response for status code and data length
     int method, status_code, data_len;
@@ -379,7 +303,7 @@ SIM7600_Status SIM7600_HTTPPost(const char *url, const char *payload, char *resp
     {
         printf("[SIM] Failed to parse +HTTPACTION response: %s\n", at_resp);
         status = SIM7600_ERROR;
-        goto cleanup;
+        // goto cleanup;
     }
 
     printf("[SIM] HTTP POST status: %d, data length: %d\n", status_code, data_len);
@@ -389,7 +313,7 @@ SIM7600_Status SIM7600_HTTPPost(const char *url, const char *payload, char *resp
     {
         snprintf(cmd, sizeof(cmd), "+HTTPREAD=0,%d", data_len); // read entire response
         status = SIM7600_SendAT(cmd, "OK", resp_buf, resp_buf_len, 10000);
-        if (status != SIM7600_OK) goto cleanup;
+        // if (status != SIM7600_OK) goto cleanup;
         printf("[SIM] HTTP response:\n%s\n", resp_buf);
     }
 
@@ -417,7 +341,7 @@ SIM7600_Status SIM7600_SendRawHTTPPost(const char *host, uint16_t port, const ch
     //    when the response ends — required for HTTP/1.1 (keep-alive by default)
     char http_request[512];
     snprintf(http_request, sizeof(http_request),
-             "POST /post HTTP/1.1\r\n"
+             "POST / HTTP/1.1\r\n"
              "Host: %s\r\n"
              "Content-Type: text/plain\r\n"
              "Content-Length: %d\r\n"

@@ -191,11 +191,10 @@ int main(void)
   SIM7600_SendAT("+CGACT?", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);     // check pdp active
   SIM7600_SendAT("+CGPADDR", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);   // check IP assigned
   SIM7600_SendAT("+NETOPEN", "+NETOPEN: 0", resp, sizeof(resp), SIM7600_TIMEOUT_LONG);   // open network service; may error if already open
-  SIM7600_SendAT("+CDNSCFG=\"8.8.8.8\",\"8.8.4.4\"", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT); // Hologram APN doesn't push DNS
+  // SIM7600_SendAT("+CDNSCFG=\"8.8.8.8\",\"8.8.4.4\"", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_SHORT); // Hologram APN doesn't push DNS
   SIM7600_SendAT("+IPADDR", "+IPADDR:", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);     // verify IP assigned
-  // SIM7600_HTTPPost1("httpbin.org/post", "Hello, World!", resp, sizeof(resp));
-
-  SIM7600_SendRawHTTPPost("httpbin.org", 80, "Hello, World!");
+  SIM7600_HTTPPost("https://eremitic-isochronal-ethan.ngrok-free.dev", "Hello from UTS!", resp, sizeof(resp));
+  // SIM7600_SendRawHTTPPost("eremitic-isochronal-ethan.ngrok-free.dev", 80, "Hello, World!");
   SIM7600_SendAT("+CGPS=0", "OK", resp, sizeof(resp), SIM7600_TIMEOUT_MEDIUM);
 
   // typedef struct {
