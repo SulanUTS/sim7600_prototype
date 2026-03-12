@@ -261,8 +261,143 @@ SIM7600_Status SIM7600_SendSMS(const char *number, const char *sms_body)
     printf("[SIM] SMS Send Timeout\n");
     return SIM7600_TIMEOUT;
 }
+#define HTTP_MAX_RESP 512
 
+SIM7600_Status SIM7600_HTTPPost1(const char *url,
+                                const char *payload,
+                                char *resp_buf,
+                                uint16_t resp_buf_len)
+{
+    char at_resp[256];
+    SIM7600_Status status;
+    int data_len = 0;
 
+    if (!url || !payload || !resp_buf || resp_buf_len == 0)
+        return SIM7600_ERROR;
+
+    // 1. Set HTTP SSL mode off (plain HTTP; set 1 for HTTPS)
+    status = SIM7600_SendAT("+HTTPSSL=0", "OK", at_resp, sizeof(at_resp), 2000);
+    if (status != SIM7600_OK) return status;
+
+    // 2. Initialize HTTP service
+    status = SIM7600_SendAT("+HTTPINIT", "OK", at_resp, sizeof(at_resp), 5000);
+    if (status != SIM7600_OK) return status;
+
+    // 3. Set PDP context ID
+    status = SIM7600_SendAT("+HTTPPARA=\"CID\",1", "OK", at_resp, sizeof(at_resp), 2000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // 4. Set URL
+    char cmd[256];
+    snprintf(cmd, sizeof(cmd), "+HTTPPARA=\"URL\",\"%s\"", url);
+    status = SIM7600_SendAT(cmd, "OK", at_resp, sizeof(at_resp), 2000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // 5. Set content type
+    status = SIM7600_SendAT("+HTTPPARA=\"CONTENT\",\"text/plain\"", "OK", at_resp, sizeof(at_resp), 2000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // 6. Send payload
+    snprintf(cmd, sizeof(cmd), "+HTTPDATA=%d,10000", (int)strlen(payload));
+    status = SIM7600_SendAT(cmd, "DOWNLOAD", at_resp, sizeof(at_resp), 5000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // Transmit payload
+    HAL_UART_Transmit(s_huart, (uint8_t*)payload, (uint16_t)strlen(payload), 5000);
+
+    // 7. Execute POST
+    status = SIM7600_SendAT("+HTTPACTION=1", "+HTTPACTION:", at_resp, sizeof(at_resp), 15000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // Parse data length from +HTTPACTION response
+    int status_code = 0;
+    if (sscanf(at_resp, "+HTTPACTION:%*d,%d,%d", &status_code, &data_len) != 2)
+    {
+        printf("[SIM] Failed to parse +HTTPACTION response: %s\n", at_resp);
+        status = SIM7600_ERROR;
+        goto cleanup;
+    }
+    printf("[SIM] HTTP POST returned status %d, data length %d\n", status_code, data_len);
+
+    // 8. Read HTTP response
+    if (data_len > 0)
+    {
+        if ((uint16_t)data_len > resp_buf_len - 1) data_len = resp_buf_len - 1; // truncate if too long
+        snprintf(cmd, sizeof(cmd), "+HTTPREAD=0,%d", data_len);
+        status = SIM7600_SendAT(cmd, "OK", resp_buf, resp_buf_len, 10000);
+        if (status != SIM7600_OK) goto cleanup;
+    }
+    else
+    {
+        resp_buf[0] = '\0'; // no response body
+    }
+
+cleanup:
+    SIM7600_SendAT("+HTTPTERM", "OK", at_resp, sizeof(at_resp), 5000);
+    return status;
+}
+
+SIM7600_Status SIM7600_HTTPPost(const char *url, const char *payload, char *resp_buf, uint16_t resp_buf_len)
+{
+    char at_resp[256];
+    SIM7600_Status status;
+
+    // 1. Initialize HTTP service
+    status = SIM7600_SendAT("+HTTPINIT", "OK", at_resp, sizeof(at_resp), 5000);
+    if (status != SIM7600_OK) return status;
+
+    // 2. Set PDP context ID (usually 1)
+    status = SIM7600_SendAT("+HTTPPARA=\"CID\",1", "OK", at_resp, sizeof(at_resp), 2000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // 3. Set target URL
+    char cmd[256];
+    snprintf(cmd, sizeof(cmd), "+HTTPPARA=\"URL\",\"%s\"", url);
+    status = SIM7600_SendAT(cmd, "OK", at_resp, sizeof(at_resp), 2000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // 4. Set content type
+    snprintf(cmd, sizeof(cmd), "+HTTPPARA=\"CONTENT\",\"text/plain\"");
+    status = SIM7600_SendAT(cmd, "OK", at_resp, sizeof(at_resp), 2000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // 5. Send data
+    snprintf(cmd, sizeof(cmd), "+HTTPDATA=%d,10000", (int)strlen(payload)); // 10s timeout
+    status = SIM7600_SendAT(cmd, "DOWNLOAD", at_resp, sizeof(at_resp), 5000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // 5b. Transmit payload
+    HAL_UART_Transmit(s_huart, (uint8_t*)payload, (uint16_t)strlen(payload), 5000);
+
+    // 6. Execute HTTP POST (1 = POST)
+    status = SIM7600_SendAT("+HTTPACTION=1", "+HTTPACTION:", at_resp, sizeof(at_resp), 15000);
+    if (status != SIM7600_OK) goto cleanup;
+
+    // 6b. Parse HTTPACTION response for status code and data length
+    int method, status_code, data_len;
+    if (sscanf(at_resp, "+HTTPACTION:%d,%d,%d", &method, &status_code, &data_len) != 3)
+    {
+        printf("[SIM] Failed to parse +HTTPACTION response: %s\n", at_resp);
+        status = SIM7600_ERROR;
+        goto cleanup;
+    }
+
+    printf("[SIM] HTTP POST status: %d, data length: %d\n", status_code, data_len);
+
+    // 7. Read HTTP response body (can be partial)
+    if (data_len > 0 && resp_buf != NULL && resp_buf_len > 0)
+    {
+        snprintf(cmd, sizeof(cmd), "+HTTPREAD=0,%d", data_len); // read entire response
+        status = SIM7600_SendAT(cmd, "OK", resp_buf, resp_buf_len, 10000);
+        if (status != SIM7600_OK) goto cleanup;
+        printf("[SIM] HTTP response:\n%s\n", resp_buf);
+    }
+
+cleanup:
+    // 8. Terminate HTTP service
+    SIM7600_SendAT("+HTTPTERM", "OK", at_resp, sizeof(at_resp), 5000);
+    return status;
+}
 SIM7600_Status SIM7600_SendRawHTTPPost(const char *host, uint16_t port, const char *payload)
 {
     char resp[256];
@@ -341,17 +476,13 @@ SIM7600_Status SIM7600_SendRawHTTPPost(const char *host, uint16_t port, const ch
         return status;
     }
 
-    // 4b. Flush buffer so the response wait captures only the server's HTTP reply.
-    //     (The current buffer contains the echoed request which includes "HTTP/1.1",
-    //     so we must NOT search for HTTP version strings in the old buffer.)
-    //     With Connection: close, the server closes after replying → "+IPCLOSE: 0,1".
-    __disable_irq();
-    s_resp_len = 0;
-    s_resp_buf[0] = '\0';
-    uint16_t cur_pos3 = (uint16_t)(SIM7600_DMA_BUF_SIZE - __HAL_DMA_GET_COUNTER(s_huart->hdmarx));
-    s_dma_prev = cur_pos3 % SIM7600_DMA_BUF_SIZE;
-    __enable_irq();
-
+    // 4b. Wait for server response and connection close.
+    //     Do NOT flush here — the HTTP response often arrives in the same DMA burst
+    //     as +CIPSEND and is already partially in the DMA buffer. Flushing would
+    //     advance s_dma_prev past the response header, dropping the start of the reply.
+    //     With Connection: close the server closes after replying → "+IPCLOSE: 0,1".
+    //     Use "HTTP/1.1 2" (includes the status digit) to avoid matching the echoed
+    //     request line "POST /post HTTP/1.1" which has no status digit after the version.
     uint32_t t_rx = HAL_GetTick();
     while ((HAL_GetTick() - t_rx) < SIM7600_TIMEOUT_LONG)
     {
@@ -366,7 +497,7 @@ SIM7600_Status SIM7600_SendRawHTTPPost(const char *host, uint16_t port, const ch
     else if (strstr((char*)s_resp_buf, "HTTP/1.1") != NULL)
         printf("[SIM] HTTP error — check status line above\n");
     else
-        printf("[SIM] HTTP response not captured (buffer may have overflowed)\n");
+        printf("[SIM] HTTP response not captured\n");
 
     // 5. Connection: close means the server already closed it (+IPCLOSE: 0,1).
     //    Only send CIPCLOSE if still open.

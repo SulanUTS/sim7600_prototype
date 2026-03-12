@@ -96,6 +96,11 @@ SIM7600_Status SIM7600_SendAT(const char *cmd,
  * @param  size   The Size parameter forwarded from the HAL callback.
  */
  SIM7600_Status SIM7600_SendSMS(const char *number, const char *sms_body);
+ SIM7600_Status SIM7600_HTTPPost1(const char *url,
+                                const char *payload,
+                                char *resp_buf,
+                                uint16_t resp_buf_len);
+ SIM7600_Status SIM7600_HTTPPost(const char *url, const char *payload, char *resp_buf, uint16_t resp_buf_len);
  SIM7600_Status SIM7600_SendRawHTTPPost(const char *host, uint16_t port, const char *payload);
 void SIM7600_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size);
 
